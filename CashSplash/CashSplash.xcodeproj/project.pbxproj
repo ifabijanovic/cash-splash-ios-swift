@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81B3AA75196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
+		81B3AA76196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C06B1962B6480098DB08 /* AppDelegate.swift */; };
 		81D2C06E1962B6480098DB08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D2C06D1962B6480098DB08 /* Images.xcassets */; };
 		81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0791962B6480098DB08 /* CashSplashTests.swift */; };
 		81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */; };
 		81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */; };
+		81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0881962BF840098DB08 /* CSSettingsManager.swift */; };
+		81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0881962BF840098DB08 /* CSSettingsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		81B3AA74196434BC001582FC /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		81D2C0661962B6480098DB08 /* CashSplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashSplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D2C06A1962B6480098DB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D2C06B1962B6480098DB08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -33,6 +38,7 @@
 		81D2C0781962B6480098DB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D2C0791962B6480098DB08 /* CashSplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashSplashTests.swift; sourceTree = "<group>"; };
 		81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModel.swift; path = Model/CSSpendingModel.swift; sourceTree = "<group>"; };
+		81D2C0881962BF840098DB08 /* CSSettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSettingsManager.swift; path = Util/CSSettingsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				81D2C0831962B89D0098DB08 /* Model */,
+				81D2C0871962BF6E0098DB08 /* Util */,
 				81D2C06B1962B6480098DB08 /* AppDelegate.swift */,
 				81D2C06D1962B6480098DB08 /* Images.xcassets */,
 				81D2C0691962B6480098DB08 /* Supporting Files */,
@@ -86,6 +93,7 @@
 			isa = PBXGroup;
 			children = (
 				81D2C06A1962B6480098DB08 /* Info.plist */,
+				81B3AA74196434BC001582FC /* Settings.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -113,6 +121,14 @@
 				81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		81D2C0871962BF6E0098DB08 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				81D2C0881962BF840098DB08 /* CSSettingsManager.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D2C06E1962B6480098DB08 /* Images.xcassets in Resources */,
+				81B3AA75196434BC001582FC /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,6 +220,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B3AA76196434BC001582FC /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,6 +233,7 @@
 			files = (
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
 				81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
+				81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,6 +243,7 @@
 			files = (
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
 				81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
+				81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -396,6 +416,7 @@
 				81D2C07F1962B6480098DB08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		81D2C0801962B6480098DB08 /* Build configuration list for PBXNativeTarget "CashSplashTests" */ = {
 			isa = XCConfigurationList;
@@ -404,6 +425,7 @@
 				81D2C0821962B6480098DB08 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
