@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8133F1C4196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */; };
+		8133F1C5196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */; };
 		813E831D19643B6800D04FC3 /* CSLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831C19643B6800D04FC3 /* CSLabelRepository.swift */; };
 		813E831E19643B6800D04FC3 /* CSLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831C19643B6800D04FC3 /* CSLabelRepository.swift */; };
 		813E832019643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */; };
@@ -48,6 +50,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxLabelRepository.swift; path = Data/Dropbox/CSDropboxLabelRepository.swift; sourceTree = "<group>"; };
 		813E831C19643B6800D04FC3 /* CSLabelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSLabelRepository.swift; path = Data/Interface/CSLabelRepository.swift; sourceTree = "<group>"; };
 		813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModelRepository.swift; path = Data/Interface/CSSpendingModelRepository.swift; sourceTree = "<group>"; };
 		813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/Interface/CSRepositoryFactory.swift; sourceTree = "<group>"; };
@@ -221,6 +224,7 @@
 			isa = PBXGroup;
 			children = (
 				81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */,
+				8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */,
 			);
 			name = Dropbox;
 			sourceTree = "<group>";
@@ -334,6 +338,7 @@
 				81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
 				813E831D19643B6800D04FC3 /* CSLabelRepository.swift in Sources */,
 				81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */,
+				8133F1C4196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -350,6 +355,7 @@
 				81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
 				813E831E19643B6800D04FC3 /* CSLabelRepository.swift in Sources */,
 				81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */,
+				8133F1C5196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
