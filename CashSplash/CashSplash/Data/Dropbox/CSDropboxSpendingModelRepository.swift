@@ -26,7 +26,7 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     
     override func getAll() -> Array<CSSpendingModel> {
         if (self.table) {
-            // Sync here
+            CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             let data : NSArray! = self.table!.query(nil, error: &error)
             
@@ -49,7 +49,7 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     
     override func getAllFromDate(date: NSDate) -> Array<CSSpendingModel> {
         if (self.table) {
-            // Sync here
+            CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             let data : NSArray! = self.table!.query(nil, error: &error)
             
@@ -77,7 +77,7 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     
     override func get(key: String) -> CSSpendingModel? {
         if (self.table) {
-            // Sync here
+            CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             
             let item = ["key": key]

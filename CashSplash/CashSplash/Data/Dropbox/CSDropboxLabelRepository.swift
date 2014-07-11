@@ -26,7 +26,7 @@ class CSDropboxLabelRepository: CSLabelRepository {
     
     override func getAll() -> Array<String> {
         if (self.table) {
-            // Sync here
+            CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             let data : NSArray! = self.table!.query(nil, error: &error)
             
