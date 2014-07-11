@@ -26,6 +26,15 @@
 		81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */; };
 		81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0881962BF840098DB08 /* CSSettingsManager.swift */; };
 		81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0881962BF840098DB08 /* CSSettingsManager.swift */; };
+		81D8A834196AD4D70008AA99 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A833196AD4D70008AA99 /* CFNetwork.framework */; };
+		81D8A836196AD4DF0008AA99 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A835196AD4DF0008AA99 /* Security.framework */; };
+		81D8A838196AD4E80008AA99 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A837196AD4E80008AA99 /* SystemConfiguration.framework */; };
+		81D8A83A196AD4EF0008AA99 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A839196AD4EF0008AA99 /* QuartzCore.framework */; };
+		81D8A83C196AD4FC0008AA99 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A83B196AD4FC0008AA99 /* libc++.dylib */; };
+		81D8A83E196AD5050008AA99 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A83D196AD5050008AA99 /* libz.dylib */; };
+		81D8A845196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */; };
+		81D8A846196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */; };
+		81D8A84D196ADA960008AA99 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A84C196ADA960008AA99 /* Dropbox.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +63,15 @@
 		81D2C0791962B6480098DB08 /* CashSplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashSplashTests.swift; sourceTree = "<group>"; };
 		81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModel.swift; path = Model/CSSpendingModel.swift; sourceTree = "<group>"; };
 		81D2C0881962BF840098DB08 /* CSSettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSettingsManager.swift; path = Util/CSSettingsManager.swift; sourceTree = "<group>"; };
+		81D8A833196AD4D70008AA99 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		81D8A835196AD4DF0008AA99 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		81D8A837196AD4E80008AA99 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		81D8A839196AD4EF0008AA99 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		81D8A83B196AD4FC0008AA99 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		81D8A83D196AD5050008AA99 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxCategoryRepository.swift; path = Data/Dropbox/CSDropboxCategoryRepository.swift; sourceTree = "<group>"; };
+		81D8A847196AD82C0008AA99 /* CashSplash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplash-Bridging-Header.h"; sourceTree = "<group>"; };
+		81D8A84C196ADA960008AA99 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +79,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81D8A84D196ADA960008AA99 /* Dropbox.framework in Frameworks */,
+				81D8A83E196AD5050008AA99 /* libz.dylib in Frameworks */,
+				81D8A83C196AD4FC0008AA99 /* libc++.dylib in Frameworks */,
+				81D8A83A196AD4EF0008AA99 /* QuartzCore.framework in Frameworks */,
+				81D8A838196AD4E80008AA99 /* SystemConfiguration.framework in Frameworks */,
+				81D8A836196AD4DF0008AA99 /* Security.framework in Frameworks */,
+				81D8A834196AD4D70008AA99 /* CFNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +102,7 @@
 		81B3AA771964355A001582FC /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				81D8A843196AD5CB0008AA99 /* Dropbox */,
 				81B3AA7819643563001582FC /* Interface */,
 			);
 			name = Data;
@@ -106,6 +132,7 @@
 			children = (
 				81D2C0681962B6480098DB08 /* CashSplash */,
 				81D2C0761962B6480098DB08 /* CashSplashTests */,
+				81D8A83F196AD5100008AA99 /* Frameworks */,
 				81D2C0671962B6480098DB08 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -129,6 +156,7 @@
 				81D2C06B1962B6480098DB08 /* AppDelegate.swift */,
 				81D2C06D1962B6480098DB08 /* Images.xcassets */,
 				81D2C0691962B6480098DB08 /* Supporting Files */,
+				81D8A847196AD82C0008AA99 /* CashSplash-Bridging-Header.h */,
 			);
 			path = CashSplash;
 			sourceTree = "<group>";
@@ -173,6 +201,28 @@
 				81D2C0881962BF840098DB08 /* CSSettingsManager.swift */,
 			);
 			name = Util;
+			sourceTree = "<group>";
+		};
+		81D8A83F196AD5100008AA99 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81D8A833196AD4D70008AA99 /* CFNetwork.framework */,
+				81D8A84C196ADA960008AA99 /* Dropbox.framework */,
+				81D8A83B196AD4FC0008AA99 /* libc++.dylib */,
+				81D8A83D196AD5050008AA99 /* libz.dylib */,
+				81D8A839196AD4EF0008AA99 /* QuartzCore.framework */,
+				81D8A835196AD4DF0008AA99 /* Security.framework */,
+				81D8A837196AD4E80008AA99 /* SystemConfiguration.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		81D8A843196AD5CB0008AA99 /* Dropbox */ = {
+			isa = PBXGroup;
+			children = (
+				81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */,
+			);
+			name = Dropbox;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,6 +328,7 @@
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
 				81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */,
 				813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
+				81D8A845196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
 				81B3AA7E196439A0001582FC /* ArrayExtensions.swift in Sources */,
 				813E832019643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */,
 				81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
@@ -293,6 +344,7 @@
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
 				81B3AA7B19643586001582FC /* CSCategoryRepository.swift in Sources */,
 				813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
+				81D8A846196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
 				81B3AA7F196439A0001582FC /* ArrayExtensions.swift in Sources */,
 				813E832119643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */,
 				81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
@@ -397,9 +449,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CashSplash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashSplash/CashSplash-Bridging-Header.h";
 			};
 			name = Debug;
 		};
@@ -409,9 +466,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = CashSplash/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashSplash/CashSplash-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -422,6 +484,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -442,6 +505,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
+					"$(PROJECT_DIR)",
 				);
 				INFOPLIST_FILE = CashSplashTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
