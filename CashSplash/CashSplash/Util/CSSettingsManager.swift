@@ -66,7 +66,7 @@ class CSSettingsManager: NSObject {
         static var instance : CSSettingsManager?
     }
     
-    class var sharedManager: CSSettingsManager {
+    class func sharedManager() -> CSSettingsManager {
         dispatch_once(&Singleton.token) {
             Singleton.instance = CSSettingsManager()
         }

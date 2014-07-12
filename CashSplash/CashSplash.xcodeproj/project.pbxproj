@@ -21,6 +21,8 @@
 		813E832119643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */; };
 		813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */; };
 		813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */; };
+		81560126197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
+		81560127197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
 		81B3AA75196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81B3AA76196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7919643586001582FC /* CSCategoryRepository.swift */; };
@@ -63,6 +65,7 @@
 		813E831C19643B6800D04FC3 /* CSLabelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSLabelRepository.swift; path = Data/Interface/CSLabelRepository.swift; sourceTree = "<group>"; };
 		813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModelRepository.swift; path = Data/Interface/CSSpendingModelRepository.swift; sourceTree = "<group>"; };
 		813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/Interface/CSRepositoryFactory.swift; sourceTree = "<group>"; };
+		81560125197189CC00B6E51E /* CSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataManager.swift; path = Data/CSDataManager.swift; sourceTree = "<group>"; };
 		81B3AA74196434BC001582FC /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		81B3AA7919643586001582FC /* CSCategoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSCategoryRepository.swift; path = Data/Interface/CSCategoryRepository.swift; sourceTree = "<group>"; };
 		81B3AA7D196439A0001582FC /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Extensions/ArrayExtensions.swift; sourceTree = "<group>"; };
@@ -116,6 +119,7 @@
 			children = (
 				81D8A843196AD5CB0008AA99 /* Dropbox */,
 				81B3AA7819643563001582FC /* Interface */,
+				81560125197189CC00B6E51E /* CSDataManager.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -342,6 +346,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
+				81560126197189CC00B6E51E /* CSDataManager.swift in Sources */,
 				81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */,
 				813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
 				81D8A845196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
@@ -362,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
+				81560127197189CC00B6E51E /* CSDataManager.swift in Sources */,
 				81B3AA7B19643586001582FC /* CSCategoryRepository.swift in Sources */,
 				813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
 				81D8A846196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
