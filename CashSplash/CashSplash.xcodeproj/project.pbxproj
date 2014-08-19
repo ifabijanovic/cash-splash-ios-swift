@@ -27,8 +27,6 @@
 		81B3AA76196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7919643586001582FC /* CSCategoryRepository.swift */; };
 		81B3AA7B19643586001582FC /* CSCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7919643586001582FC /* CSCategoryRepository.swift */; };
-		81B3AA7E196439A0001582FC /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7D196439A0001582FC /* ArrayExtensions.swift */; };
-		81B3AA7F196439A0001582FC /* ArrayExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7D196439A0001582FC /* ArrayExtensions.swift */; };
 		81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C06B1962B6480098DB08 /* AppDelegate.swift */; };
 		81D2C06E1962B6480098DB08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D2C06D1962B6480098DB08 /* Images.xcassets */; };
 		81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0791962B6480098DB08 /* CashSplashTests.swift */; };
@@ -66,9 +64,9 @@
 		813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModelRepository.swift; path = Data/Interface/CSSpendingModelRepository.swift; sourceTree = "<group>"; };
 		813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/Interface/CSRepositoryFactory.swift; sourceTree = "<group>"; };
 		81560125197189CC00B6E51E /* CSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataManager.swift; path = Data/CSDataManager.swift; sourceTree = "<group>"; };
+		81AEF71B19A337AB00A26B7E /* CashSplashTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplashTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		81B3AA74196434BC001582FC /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		81B3AA7919643586001582FC /* CSCategoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSCategoryRepository.swift; path = Data/Interface/CSCategoryRepository.swift; sourceTree = "<group>"; };
-		81B3AA7D196439A0001582FC /* ArrayExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArrayExtensions.swift; path = Extensions/ArrayExtensions.swift; sourceTree = "<group>"; };
 		81D2C0661962B6480098DB08 /* CashSplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashSplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D2C06A1962B6480098DB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D2C06B1962B6480098DB08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,14 +133,6 @@
 			name = Interface;
 			sourceTree = "<group>";
 		};
-		81B3AA7C19643983001582FC /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				81B3AA7D196439A0001582FC /* ArrayExtensions.swift */,
-			);
-			name = Extensions;
-			sourceTree = "<group>";
-		};
 		81D2C05D1962B6480098DB08 = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +158,6 @@
 				81B3AA771964355A001582FC /* Data */,
 				81D2C0831962B89D0098DB08 /* Model */,
 				81D2C0871962BF6E0098DB08 /* Util */,
-				81B3AA7C19643983001582FC /* Extensions */,
 				81D2C06B1962B6480098DB08 /* AppDelegate.swift */,
 				81D2C06D1962B6480098DB08 /* Images.xcassets */,
 				81D2C0691962B6480098DB08 /* Supporting Files */,
@@ -191,6 +180,7 @@
 			children = (
 				81D2C0791962B6480098DB08 /* CashSplashTests.swift */,
 				81D2C0771962B6480098DB08 /* Supporting Files */,
+				81AEF71B19A337AB00A26B7E /* CashSplashTests-Bridging-Header.h */,
 			);
 			path = CashSplashTests;
 			sourceTree = "<group>";
@@ -351,7 +341,6 @@
 				813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
 				81D8A845196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
 				8133F1C7196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */,
-				81B3AA7E196439A0001582FC /* ArrayExtensions.swift in Sources */,
 				813E832019643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */,
 				81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
 				8133F1CD196FFB8900D51900 /* CSDropboxManager.swift in Sources */,
@@ -372,7 +361,6 @@
 				813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
 				81D8A846196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
 				8133F1C8196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */,
-				81B3AA7F196439A0001582FC /* ArrayExtensions.swift in Sources */,
 				813E832119643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */,
 				81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
 				8133F1CE196FFB8900D51900 /* CSDropboxManager.swift in Sources */,
@@ -524,6 +512,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashSplashTests/CashSplashTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -541,6 +530,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				METAL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CashSplashTests/CashSplashTests-Bridging-Header.h";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;

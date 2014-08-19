@@ -8,19 +8,23 @@
 
 import UIKit
 
-class CSRepositoryFactory: NSObject {
+public class CSRepositoryFactory {
+    
+    // Init
+    
+    internal init() {}
     
     // Public methods
     
-    func createSpendingModelRepository() -> CSSpendingModelRepository {
+    public func createSpendingModelRepository() -> CSSpendingModelRepository {
         return CSSpendingModelRepository()
     }
     
-    func createCategoryRepository() -> CSCategoryRepository {
+    public func createCategoryRepository() -> CSCategoryRepository {
         return CSCategoryRepository()
     }
     
-    func createLabelRepository() -> CSLabelRepository {
+    public func createLabelRepository() -> CSLabelRepository {
         return CSLabelRepository()
     }
 }

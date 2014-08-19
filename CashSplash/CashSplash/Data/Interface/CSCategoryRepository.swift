@@ -8,28 +8,39 @@
 
 import UIKit
 
-class CSCategoryRepository: NSObject {
-    var storage: Array<String>
+public class CSCategoryRepository {
+    internal var storage: Array<String>
     
     // Init
     
-    init() {
-        storage = Array<String>()
+    internal init() {
+        self.storage = Array<String>()
     }
     
     // Public methods
     
-    func getAll() -> Array<String> {
+    public func getAll() -> Array<String> {
         return self.storage
     }
     
-    func save(category: String) -> Bool {
+    public func save(category: String) -> Bool {
         self.storage.append(category)
         return true
     }
     
-    func remove(category: String) -> Bool {
-        self.storage.removeObject(category)
+    public func remove(category: String) -> Bool {
+        var indexToRemove = -1
+        for (index, item) in enumerate(self.storage) {
+            if item == category {
+                indexToRemove = index
+                break
+            }
+        }
+        
+        if (indexToRemove > -1) {
+            self.storage.removeAtIndex(indexToRemove)
+        }
+        
         return true
     }
 }

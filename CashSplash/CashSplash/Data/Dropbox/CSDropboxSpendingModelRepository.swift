@@ -8,16 +8,16 @@
 
 import UIKit
 
-class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
+internal class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     let tableName = "spending_model"
     let datastore : DBDatastore?
     let table : DBTable?
     
     // Init
     
-    init(datastore: DBDatastore?) {
+    internal init(datastore: DBDatastore?) {
         self.datastore = datastore
-        if (datastore) {
+        if (datastore != nil) {
             self.table = self.datastore!.getTable(self.tableName)
         }
     }
@@ -25,17 +25,17 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     // Public methods
     
     override func getAll() -> Array<CSSpendingModel> {
-        if (self.table) {
+        if (self.table != nil) {
             CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             let data : NSArray! = self.table!.query(nil, error: &error)
             
-            if (error) {
+            if (error != nil) {
                 NSLog("[Dropbox] Spending model getAll error: %@", error!)
                 return Array<CSSpendingModel>()
             }
             
-            let dataArray = Array<DBRecord>.bridgeFromObjectiveC(data)
+            let dataArray = data as Array<DBRecord>
             var items = Array<CSSpendingModel>()
             for item in dataArray {
                 items.append(self.modelFromDBRecord(item))
@@ -48,17 +48,17 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     }
     
     override func getAllFromDate(date: NSDate) -> Array<CSSpendingModel> {
-        if (self.table) {
+        if (self.table != nil) {
             CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             let data : NSArray! = self.table!.query(nil, error: &error)
             
-            if (error) {
+            if (error != nil) {
                 NSLog("[Dropbox] Spending model getAllFromDate error: %@", error!)
                 return Array<CSSpendingModel>()
             }
             
-            let dataArray = Array<DBRecord>.bridgeFromObjectiveC(data)
+            let dataArray = data as Array<DBRecord>
             var items = Array<CSSpendingModel>()
             for item in dataArray {
                 items.append(self.modelFromDBRecord(item))
@@ -76,23 +76,22 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     }
     
     override func get(key: String) -> CSSpendingModel? {
-        if (self.table) {
+        if (self.table != nil) {
             CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             
-            let item = ["key": key]
-            let dictionary = item.bridgeToObjectiveC()
+            let dictionary = ["key": key] as NSDictionary
             let records : NSArray! = self.table!.query(dictionary, error: &error)
             
-            if (error) {
+            if (error != nil) {
                 NSLog("[Dropbox] Spending model get error: %@", error!);
                 return nil
             }
             
             error = nil
-            let data = Array<DBRecord>.bridgeFromObjectiveC(records)
+            let data = records as Array<DBRecord>
             let record : DBRecord? = data.isEmpty ? nil : data[0]
-            if (record) {
+            if (record != nil) {
                 return self.modelFromDBRecord(record!)
             }
         }
@@ -101,7 +100,7 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     }
     
     override func save(model: CSSpendingModel) -> Bool {
-        if (self.table) {
+        if (self.table != nil) {
             var error : DBError? = nil
             
             let item = self.dictionaryFromModel(model)
@@ -109,7 +108,7 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
             self.table!.insert(item)
             self.datastore!.sync(&error)
             
-            if (error) {
+            if (error != nil) {
                 NSLog("[Dropbox] Spending model save error: %@", error!);
                 return false
             }
@@ -120,26 +119,25 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     }
     
     override func remove(model: CSSpendingModel) -> Bool {
-        if (self.table) {
+        if (self.table != nil) {
             var error : DBError? = nil
             
-            let item = ["key": model.key]
-            let dictionary = item.bridgeToObjectiveC()
+            let dictionary = ["key": model.key] as NSDictionary
             let records : NSArray! = self.table!.query(dictionary, error: &error)
             
-            if (error) {
+            if (error != nil) {
                 NSLog("[Dropbox] Spending model remove error: %@", error!);
                 return false
             }
             
             error = nil
-            let data = Array<DBRecord>.bridgeFromObjectiveC(records)
+            let data = records as Array<DBRecord>
             let record : DBRecord? = data.isEmpty ? nil : data[0]
-            if (record) {
+            if (record != nil) {
                 record!.deleteRecord()
                 self.datastore!.sync(&error)
                 
-                if (error) {
+                if (error != nil) {
                     NSLog("[Dropbox] Spending model remove error: %@", error!);
                     return false
                 }
@@ -152,9 +150,8 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
     
     // Private methods
     
-    func modelFromDBRecord(dbRecord: DBRecord) -> CSSpendingModel {
-        var model = CSSpendingModel()
-        model.key = dbRecord["key"] as String
+    private func modelFromDBRecord(dbRecord: DBRecord) -> CSSpendingModel {
+        var model = CSSpendingModel(key: dbRecord["key"] as String)
         model.amount = dbRecord["amount"] as Float
         model.category = dbRecord["category"] as String?
         model.label = dbRecord["label"] as String?
@@ -164,7 +161,7 @@ class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
         return model
     }
     
-    func dictionaryFromModel(model : CSSpendingModel) -> NSDictionary {
+    private func dictionaryFromModel(model : CSSpendingModel) -> NSDictionary {
         var dictionary = NSDictionary()
         dictionary.setValue(model.key, forKey: "key")
         dictionary.setValue(NSNumber(float: model.amount), forKey: "amount")

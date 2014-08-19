@@ -14,23 +14,26 @@ let kDropboxAppSecret   = "dropbox_app_secret"
 let kUseDropbox         = "use_dropbox"
 let kDataDisplayDays    = "data_display_days"
 
-class CSSettingsManager: NSObject {
-    let appVersion: String
-    let dropBoxAppKey: String
-    let dropBoxAppSecret: String
+internal class CSSettingsManager {
     
-    var useDropbox: Bool
-    var dataDisplaysDays: Int
+    // Properties
+    
+    internal let appVersion: String
+    internal let dropBoxAppKey: String
+    internal let dropBoxAppSecret: String
+    
+    internal var useDropbox: Bool
+    internal var dataDisplaysDays: Int
     
     // Init
     
-    init() {
+    internal init() {
         let bundle = NSBundle.mainBundle()
         
         let path = bundle.pathForResource("Settings", ofType: "plist")
         let settings = NSDictionary(contentsOfFile: path)
-        
-        self.appVersion = bundle.objectForInfoDictionaryKey(kCFBundleVersionKey) as String
+
+        self.appVersion = bundle.objectForInfoDictionaryKey(kCFBundleVersionKey as NSString) as String!
         
         self.dropBoxAppKey = settings.objectForKey(kDropboxAppKey) as String
         self.dropBoxAppSecret = settings.objectForKey(kDropboxAppSecret) as String
@@ -50,7 +53,7 @@ class CSSettingsManager: NSObject {
     
     // Public methods
     
-    func sync() {
+    internal func sync() {
         let defaults = NSUserDefaults.standardUserDefaults()
         
         defaults.setBool(self.useDropbox, forKey: kUseDropbox)

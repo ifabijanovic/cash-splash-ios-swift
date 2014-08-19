@@ -8,27 +8,27 @@
 
 import UIKit
 
-class CSSpendingModelRepository: NSObject {
-    var storage: Array<CSSpendingModel>
+public class CSSpendingModelRepository {
+    internal var storage: Array<CSSpendingModel>
     
     // Init
     
-    init() {
-        storage = Array<CSSpendingModel>()
+    internal init() {
+        self.storage = Array<CSSpendingModel>()
     }
     
     // Public methods
     
-    func getAll() -> Array<CSSpendingModel> {
+    public func getAll() -> Array<CSSpendingModel> {
         return self.storage
     }
     
-    func getAllFromDate(date: NSDate) -> Array<CSSpendingModel> {
+    public func getAllFromDate(date: NSDate) -> Array<CSSpendingModel> {
         let predicate = NSPredicate(format: "timestamp >= %@", date)
         return self.storage.filter { $0.timestamp.compare(date) == NSComparisonResult.OrderedDescending }
     }
     
-    func get(key: String) -> CSSpendingModel? {
+    public func get(key: String) -> CSSpendingModel? {
         for model in self.storage {
             if model.key == key {
                 return model
@@ -37,13 +37,24 @@ class CSSpendingModelRepository: NSObject {
         return nil
     }
     
-    func save(model: CSSpendingModel) -> Bool {
+    public func save(model: CSSpendingModel) -> Bool {
         self.storage.append(model)
         return true
     }
     
-    func remove(model: CSSpendingModel) -> Bool {
-        self.storage.removeObject(model)
+    public func remove(model: CSSpendingModel) -> Bool {
+        var indexToRemove = -1
+        for (index, item) in enumerate(self.storage) {
+            if item == model {
+                indexToRemove = index
+                break
+            }
+        }
+        
+        if (indexToRemove > -1) {
+            self.storage.removeAtIndex(indexToRemove)
+        }
+        
         return true
     }
 }

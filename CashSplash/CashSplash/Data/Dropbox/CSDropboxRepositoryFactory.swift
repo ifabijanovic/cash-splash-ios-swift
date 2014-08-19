@@ -8,15 +8,15 @@
 
 import UIKit
 
-class CSDropboxRepositoryFactory: CSRepositoryFactory {
+internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
     let datastore : DBDatastore?
    
-    init() {
+    override init() {
         var error : DBError? = nil
         let account : DBAccount! = DBAccountManager.sharedManager().linkedAccount;
         self.datastore = DBDatastore.openDefaultStoreForAccount(account, error: &error)
 
-        if (error) {
+        if (error != nil) {
             self.datastore = nil
         } else {
             self.datastore!.sync(nil)

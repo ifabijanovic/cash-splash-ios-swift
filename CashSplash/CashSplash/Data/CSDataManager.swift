@@ -8,16 +8,17 @@
 
 import UIKit
 
-class CSDataManager: NSObject {
-    var repositoryFactory : CSRepositoryFactory? = nil
+public class CSDataManager {
     
-    // Public methods
+    // Properties
     
-    func getRepositoryFactory() -> CSRepositoryFactory {
-        if (!self.repositoryFactory) {
-            self.repositoryFactory = self.createRepositoryFactory()
+    private var factory : CSRepositoryFactory? = nil
+    
+    public var repositoryFactory : CSRepositoryFactory {
+        if (self.factory == nil) {
+            self.factory = self.createRepositoryFactory()
         }
-        return self.repositoryFactory!
+        return self.factory!
     }
     
     // Singleton
@@ -28,8 +29,8 @@ class CSDataManager: NSObject {
     }
     
     class func sharedManager() -> CSDataManager {
-    dispatch_once(&Singleton.token) {
-        Singleton.instance = CSDataManager()
+        dispatch_once(&Singleton.token) {
+            Singleton.instance = CSDataManager()
         }
         return Singleton.instance!
     }

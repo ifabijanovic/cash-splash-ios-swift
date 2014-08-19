@@ -8,28 +8,39 @@
 
 import UIKit
 
-class CSLabelRepository: NSObject {
-    var storage: Array<String>
+public class CSLabelRepository {
+    internal var storage: Array<String>
     
     // Init
     
-    init() {
-        storage = Array<String>()
+    internal init() {
+        self.storage = Array<String>()
     }
     
     // Public methods
     
-    func getAll() -> Array<String> {
+    public func getAll() -> Array<String> {
         return self.storage
     }
     
-    func save(label: String) -> Bool {
+    public func save(label: String) -> Bool {
         self.storage.append(label)
         return true
     }
     
-    func remove(label: String) -> Bool {
-        self.storage.removeObject(label)
+    public func remove(label: String) -> Bool {
+        var indexToRemove = -1
+        for (index, item) in enumerate(self.storage) {
+            if item == label {
+                indexToRemove = index
+                break
+            }
+        }
+        
+        if (indexToRemove > -1) {
+            self.storage.removeAtIndex(indexToRemove)
+        }
+        
         return true
     }
 }
