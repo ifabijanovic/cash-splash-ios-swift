@@ -10,11 +10,11 @@ import UIKit
 
 let kNotificationStorageChanged = "storage-changed"
 
-internal class CSDataSourceBase {
+public class CSDataSourceBase {
    
     // Init
     
-    internal init() {
+    public init() {
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "reload", name: kNotificationStorageChanged, object: CSDataManager.sharedManager())
     }
     
