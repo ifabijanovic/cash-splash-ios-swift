@@ -1,5 +1,5 @@
 //
-//  CSCategoryDataSource.swift
+//  CSLabelDataSource.swift
 //  CashSplash
 //
 //  Created by Ivan Fabijanovic on 27/08/14.
@@ -8,18 +8,18 @@
 
 import UIKit
 
-public class CSCategoryDataSource: CSDataSourceBase, CSTablePickerDataSource {
+public class CSLabelDataSource: CSDataSourceBase, CSTablePickerDataSource {
     
     // Properties
     
-    private var repository : CSCategoryRepository
+    private var repository : CSLabelRepository
     private var storage : Array<String>
     
     // Init
     
     public override init() {
         let factory = CSDataManager.sharedManager().repositoryFactory
-        self.repository = factory.createCategoryRepository()
+        self.repository = factory.createLabelRepository()
         self.storage = repository.getAll()
         
         super.init()
@@ -27,10 +27,10 @@ public class CSCategoryDataSource: CSDataSourceBase, CSTablePickerDataSource {
     
     public override func reload() {
         let factory = CSDataManager.sharedManager().repositoryFactory
-        self.repository = factory.createCategoryRepository()
+        self.repository = factory.createLabelRepository()
         self.storage = repository.getAll()
     }
-    
+
     // CSTablePickerDataSource
     typealias ItemType = String
     
@@ -81,5 +81,5 @@ public class CSCategoryDataSource: CSDataSourceBase, CSTablePickerDataSource {
     public func refresh() {
         self.storage = self.repository.getAll()
     }
-    
+
 }

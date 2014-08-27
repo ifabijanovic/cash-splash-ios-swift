@@ -8,12 +8,14 @@
 
 import UIKit
 
-protocol CSTablePickerDataSource {
+public protocol CSTablePickerDataSource {
     
     typealias ItemType
     func items() -> Array<ItemType>
     func count() -> Int
     func save(item: ItemType) -> Bool
     func remove(item: ItemType) -> Bool
+    
+    func refresh()
     
 }
