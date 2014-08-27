@@ -17,6 +17,8 @@
 		8125737419AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736D19AE0EAE0006C59E /* CSLabelDataSource.swift */; };
 		8125737519AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */; };
 		8125737619AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */; };
+		8125737819AE0FF20006C59E /* CSRepositoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125737719AE0FF20006C59E /* CSRepositoryBase.swift */; };
+		8125737919AE0FF20006C59E /* CSRepositoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125737719AE0FF20006C59E /* CSRepositoryBase.swift */; };
 		8133F1C4196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */; };
 		8133F1C5196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */; };
 		8133F1C7196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C6196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift */; };
@@ -71,6 +73,7 @@
 		8125736C19AE0EAE0006C59E /* CSDataSourceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataSourceBase.swift; path = UI/DataSource/CSDataSourceBase.swift; sourceTree = "<group>"; };
 		8125736D19AE0EAE0006C59E /* CSLabelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSLabelDataSource.swift; path = UI/DataSource/CSLabelDataSource.swift; sourceTree = "<group>"; };
 		8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModelDataSource.swift; path = UI/DataSource/CSSpendingModelDataSource.swift; sourceTree = "<group>"; };
+		8125737719AE0FF20006C59E /* CSRepositoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryBase.swift; path = Data/Interface/CSRepositoryBase.swift; sourceTree = "<group>"; };
 		8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxLabelRepository.swift; path = Data/Dropbox/CSDropboxLabelRepository.swift; sourceTree = "<group>"; };
 		8133F1C6196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxSpendingModelRepository.swift; path = Data/Dropbox/CSDropboxSpendingModelRepository.swift; sourceTree = "<group>"; };
 		8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxRepositoryFactory.swift; path = Data/Dropbox/CSDropboxRepositoryFactory.swift; sourceTree = "<group>"; };
@@ -170,6 +173,7 @@
 			children = (
 				81B3AA7919643586001582FC /* CSCategoryRepository.swift */,
 				813E831C19643B6800D04FC3 /* CSLabelRepository.swift */,
+				8125737719AE0FF20006C59E /* CSRepositoryBase.swift */,
 				813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */,
 				813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */,
 			);
@@ -380,6 +384,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
+				8125737819AE0FF20006C59E /* CSRepositoryBase.swift in Sources */,
 				81560126197189CC00B6E51E /* CSDataManager.swift in Sources */,
 				81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */,
 				813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
@@ -405,6 +410,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
+				8125737919AE0FF20006C59E /* CSRepositoryBase.swift in Sources */,
 				81560127197189CC00B6E51E /* CSDataManager.swift in Sources */,
 				81B3AA7B19643586001582FC /* CSCategoryRepository.swift in Sources */,
 				813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
