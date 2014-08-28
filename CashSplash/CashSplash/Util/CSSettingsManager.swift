@@ -31,7 +31,7 @@ internal class CSSettingsManager {
         let bundle = NSBundle.mainBundle()
         
         let path = bundle.pathForResource("Settings", ofType: "plist")
-        let settings = NSDictionary(contentsOfFile: path)
+        let settings = NSDictionary(contentsOfFile: path!)
 
         self.appVersion = bundle.objectForInfoDictionaryKey(kCFBundleVersionKey as NSString) as String!
         
