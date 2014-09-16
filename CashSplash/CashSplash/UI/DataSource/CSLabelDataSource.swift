@@ -12,7 +12,7 @@ public class CSLabelDataSource: CSDataSourceBase, CSTablePickerDataSource {
     
     // Properties
     
-    private var repository : CSLabelRepository
+    private var repository : CSLabelRepository<AnyObject>
     private var storage : Array<String>
     
     // Init

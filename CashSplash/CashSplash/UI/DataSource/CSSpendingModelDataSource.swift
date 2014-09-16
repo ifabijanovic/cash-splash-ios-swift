@@ -12,7 +12,7 @@ public class CSSpendingModelDataSource: CSDataSourceBase {
     
     // Properties
     
-    private var repository : CSSpendingModelRepository
+    private var repository : CSSpendingModelRepository<AnyObject>
     private var storage : Array<CSSpendingModel>
     
     // Init

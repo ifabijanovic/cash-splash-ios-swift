@@ -8,20 +8,9 @@
 
 import UIKit
 
-public class CSSpendingModelRepository {
-    internal var storage: Array<CSSpendingModel>
-    
-    // Init
-    
-    internal init() {
-        self.storage = Array<CSSpendingModel>()
-    }
+public class CSSpendingModelRepository<T>: CSRepositoryBase<CSSpendingModel> {
     
     // Public methods
-    
-    public func getAll() -> Array<CSSpendingModel> {
-        return self.storage
-    }
     
     public func getAllFromDate(date: NSDate) -> Array<CSSpendingModel> {
         let predicate = NSPredicate(format: "timestamp >= %@", date)
@@ -35,26 +24,5 @@ public class CSSpendingModelRepository {
             }
         }
         return nil
-    }
-    
-    public func save(model: CSSpendingModel) -> Bool {
-        self.storage.append(model)
-        return true
-    }
-    
-    public func remove(model: CSSpendingModel) -> Bool {
-        var indexToRemove = -1
-        for (index, item) in enumerate(self.storage) {
-            if item == model {
-                indexToRemove = index
-                break
-            }
-        }
-        
-        if (indexToRemove > -1) {
-            self.storage.removeAtIndex(indexToRemove)
-        }
-        
-        return true
     }
 }

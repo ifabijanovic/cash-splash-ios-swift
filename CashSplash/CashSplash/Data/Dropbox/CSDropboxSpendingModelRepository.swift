@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class CSDropboxSpendingModelRepository: CSSpendingModelRepository {
+internal class CSDropboxSpendingModelRepository<T>: CSSpendingModelRepository<AnyObject> {
     let tableName = "spending_model"
     let datastore : DBDatastore?
     let table : DBTable?

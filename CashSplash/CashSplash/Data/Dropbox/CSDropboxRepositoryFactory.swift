@@ -25,15 +25,15 @@ internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
     
     // Public methods
     
-    override func createCategoryRepository() -> CSCategoryRepository {
-        return CSDropboxCategoryRepository(datastore: self.datastore)
+    override func createCategoryRepository() -> CSCategoryRepository<AnyObject> {
+        return CSDropboxCategoryRepository<AnyObject>(datastore: self.datastore)
     }
     
-    override func createLabelRepository() -> CSLabelRepository {
-        return CSDropboxLabelRepository(datastore: self.datastore)
+    override func createLabelRepository() -> CSLabelRepository<AnyObject> {
+        return CSDropboxLabelRepository<AnyObject>(datastore: self.datastore)
     }
     
-    override func createSpendingModelRepository() -> CSSpendingModelRepository {
-        return CSDropboxSpendingModelRepository(datastore: self.datastore)
+    override func createSpendingModelRepository() -> CSSpendingModelRepository<AnyObject> {
+        return CSDropboxSpendingModelRepository<AnyObject>(datastore: self.datastore)
     }
 }
