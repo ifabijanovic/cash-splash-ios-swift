@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class CSDropboxCategoryRepository: CSCategoryRepository {
+internal class CSDropboxCategoryRepository<T>: CSCategoryRepository<AnyObject> {
     let tableName = "category"
     let datastore : DBDatastore?
     let table : DBTable?

@@ -46,6 +46,10 @@ public class CSRepositoryBase<T: Equatable> {
         return true
     }
     
+    public func refresh() {
+        // Implement in derived classes
+    }
+    
     // Private methods
     
     internal func findItem(item: T) -> (index: Int, element: T)? {

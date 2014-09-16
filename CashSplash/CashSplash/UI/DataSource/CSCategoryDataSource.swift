@@ -12,7 +12,7 @@ public class CSCategoryDataSource: CSDataSourceBase, CSTablePickerDataSource {
     
     // Properties
     
-    private var repository : CSCategoryRepository
+    private var repository : CSCategoryRepository<AnyObject>
     private var storage : Array<String>
     
     // Init

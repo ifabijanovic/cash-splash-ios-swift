@@ -16,15 +16,15 @@ public class CSRepositoryFactory {
     
     // Public methods
     
-    public func createSpendingModelRepository() -> CSSpendingModelRepository {
-        return CSSpendingModelRepository()
+    public func createSpendingModelRepository() -> CSSpendingModelRepository<AnyObject> {
+        return CSSpendingModelRepository<AnyObject>()
     }
     
-    public func createCategoryRepository() -> CSCategoryRepository {
-        return CSCategoryRepository()
+    public func createCategoryRepository() -> CSCategoryRepository<AnyObject> {
+        return CSCategoryRepository<AnyObject>()
     }
     
-    public func createLabelRepository() -> CSLabelRepository {
-        return CSLabelRepository()
+    public func createLabelRepository() -> CSLabelRepository<AnyObject> {
+        return CSLabelRepository<AnyObject>()
     }
 }

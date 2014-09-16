@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class CSDropboxLabelRepository: CSLabelRepository {
+internal class CSDropboxLabelRepository<T>: CSLabelRepository<AnyObject> {
     let tableName = "label"
     let datastore : DBDatastore?
     let table : DBTable?
