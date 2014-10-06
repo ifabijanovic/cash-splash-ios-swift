@@ -20,11 +20,11 @@ public class CSRepositoryFactory {
 //        return CSSpendingModelRepository<AnyObject>()
 //    }
 //    
-//    public func createCategoryRepository() -> CSCategoryRepository<AnyObject> {
-//        return CSCategoryRepository<AnyObject>()
-//    }
-//    
-//    public func createLabelRepository() -> CSLabelRepository<AnyObject> {
-//        return CSLabelRepository<AnyObject>()
-//    }
+    public func createCategoryRepository() -> CSRepository<String> {
+        return CSRepository<String>()
+    }
+    
+    public func createLabelRepository() -> CSRepository<String> {
+        return CSRepository<String>()
+    }
 }
