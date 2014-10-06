@@ -35,7 +35,8 @@ internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
         return CSRepository<String>(storer: storer)
     }
     
-//    override func createSpendingModelRepository() -> CSSpendingModelRepository<AnyObject> {
-//        return CSDropboxSpendingModelRepository<AnyObject>(datastore: self.datastore)
-//    }
+    override func createSpendingModelRepository() -> CSSpendingRepository<CSSpending> {
+        let storer = CSDropboxSpendingStorer<CSSpending>(datastore: self.datastore)
+        return CSSpendingRepository<CSSpending>(storer: storer)
+    }
 }
