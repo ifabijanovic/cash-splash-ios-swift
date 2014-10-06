@@ -25,10 +25,6 @@
 		81560127197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
 		816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5919E2CF6400F1A277 /* CSRepository.swift */; };
 		816D4F5B19E2CF6400F1A277 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5919E2CF6400F1A277 /* CSRepository.swift */; };
-		816D4F5F19E2D03C00F1A277 /* CSStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5E19E2D03C00F1A277 /* CSStorer.swift */; };
-		816D4F6019E2D03C00F1A277 /* CSStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5E19E2D03C00F1A277 /* CSStorer.swift */; };
-		816D4F6219E2D12800F1A277 /* CSSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6119E2D12800F1A277 /* CSSerializer.swift */; };
-		816D4F6319E2D12800F1A277 /* CSSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6119E2D12800F1A277 /* CSSerializer.swift */; };
 		816D4F6719E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */; };
 		816D4F6819E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */; };
 		816D4F6A19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */; };
@@ -37,6 +33,8 @@
 		816D4F7719E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */; };
 		816D4F7C19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */; };
 		816D4F7D19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */; };
+		816D4F7F19E2E0CC00F1A277 /* CSStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */; };
+		816D4F8019E2E0CC00F1A277 /* CSStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */; };
 		81B3AA75196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81B3AA76196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C06B1962B6480098DB08 /* AppDelegate.swift */; };
@@ -75,12 +73,11 @@
 		8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxManager.swift; path = Data/Dropbox/CSDropboxManager.swift; sourceTree = "<group>"; };
 		81560125197189CC00B6E51E /* CSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataManager.swift; path = Data/CSDataManager.swift; sourceTree = "<group>"; };
 		816D4F5919E2CF6400F1A277 /* CSRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepository.swift; path = Data/CSRepository.swift; sourceTree = "<group>"; };
-		816D4F5E19E2D03C00F1A277 /* CSStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSStorer.swift; path = Data/Storage/CSStorer.swift; sourceTree = "<group>"; };
-		816D4F6119E2D12800F1A277 /* CSSerializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSerializer.swift; path = Data/Storage/CSSerializer.swift; sourceTree = "<group>"; };
 		816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/CSRepositoryFactory.swift; sourceTree = "<group>"; };
 		816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingRepository.swift; path = Data/CSSpendingRepository.swift; sourceTree = "<group>"; };
 		816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxStringStorer.swift; path = Data/Dropbox/CSDropboxStringStorer.swift; sourceTree = "<group>"; };
 		816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxSpendingStorer.swift; path = Data/Dropbox/CSDropboxSpendingStorer.swift; sourceTree = "<group>"; };
+		816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSStorer.swift; path = Data/CSStorer.swift; sourceTree = "<group>"; };
 		81AEF71B19A337AB00A26B7E /* CashSplashTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplashTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		81B3AA74196434BC001582FC /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
 		81D2C0661962B6480098DB08 /* CashSplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashSplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,24 +152,15 @@
 			name = DataSource;
 			sourceTree = "<group>";
 		};
-		816D4F5D19E2D00F00F1A277 /* Storage */ = {
-			isa = PBXGroup;
-			children = (
-				816D4F6119E2D12800F1A277 /* CSSerializer.swift */,
-				816D4F5E19E2D03C00F1A277 /* CSStorer.swift */,
-			);
-			name = Storage;
-			sourceTree = "<group>";
-		};
 		81B3AA771964355A001582FC /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				81D8A843196AD5CB0008AA99 /* Dropbox */,
-				816D4F5D19E2D00F00F1A277 /* Storage */,
 				81560125197189CC00B6E51E /* CSDataManager.swift */,
 				816D4F5919E2CF6400F1A277 /* CSRepository.swift */,
 				816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */,
 				816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */,
+				816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -273,8 +261,8 @@
 			children = (
 				8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */,
 				8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */,
-				816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */,
 				816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */,
+				816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */,
 			);
 			name = Dropbox;
 			sourceTree = "<group>";
@@ -390,12 +378,11 @@
 				81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 				8125737519AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */,
 				8133F1CA196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
-				816D4F5F19E2D03C00F1A277 /* CSStorer.swift in Sources */,
 				8125737319AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */,
 				816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */,
+				816D4F7F19E2E0CC00F1A277 /* CSStorer.swift in Sources */,
 				8125737119AE0EAE0006C59E /* CSDataSourceBase.swift in Sources */,
 				816D4F6719E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */,
-				816D4F6219E2D12800F1A277 /* CSSerializer.swift in Sources */,
 				8125736219AE005D0006C59E /* CSTablePickerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,12 +402,11 @@
 				81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 				8125737619AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */,
 				8133F1CB196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
-				816D4F6019E2D03C00F1A277 /* CSStorer.swift in Sources */,
 				8125737419AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */,
 				816D4F5B19E2CF6400F1A277 /* CSRepository.swift in Sources */,
+				816D4F8019E2E0CC00F1A277 /* CSStorer.swift in Sources */,
 				8125737219AE0EAE0006C59E /* CSDataSourceBase.swift in Sources */,
 				816D4F6819E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */,
-				816D4F6319E2D12800F1A277 /* CSSerializer.swift in Sources */,
 				8125736319AE005D0006C59E /* CSTablePickerDataSource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
