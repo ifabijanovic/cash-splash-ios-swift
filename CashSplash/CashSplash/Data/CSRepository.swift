@@ -44,7 +44,7 @@ public class CSRepository<T: Equatable> {
     }
     
     public func count() -> Int {
-        return self.storage.count
+        return self.getAll().count
     }
     
     public func save(item: T) -> Bool {

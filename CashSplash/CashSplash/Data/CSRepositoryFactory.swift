@@ -14,7 +14,7 @@ public class CSRepositoryFactory {
     
     internal init() {}
     
-    // Public methods
+    // MARK: - Public methods
     
     public func createSpendingModelRepository() -> CSSpendingRepository<CSSpending> {
         return CSSpendingRepository<CSSpending>()

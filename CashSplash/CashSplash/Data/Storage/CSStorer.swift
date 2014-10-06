@@ -16,10 +16,6 @@ internal class CSStorer<T: Equatable> {
         assertionFailure("method must be implemented in derived class")
     }
     
-    internal func count() -> Int {
-        assertionFailure("method must be implemented in derived class")
-    }
-    
     internal func save(item: T) -> Bool {
         assertionFailure("method must be implemented in derived class")
     }
