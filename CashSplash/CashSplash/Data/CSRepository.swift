@@ -13,16 +13,33 @@ public class CSRepository<T: Equatable> {
     // Properties
     
     internal var storage: Array<T>
+    internal let storer: CSStorer<T>?
+    internal var isLoaded: Bool
     
     // Init
     
     internal init() {
         self.storage = Array<T>()
+        self.storer = nil
+        self.isLoaded = true
+    }
+    
+    internal init(storer: CSStorer<T>) {
+        self.storage = Array<T>()
+        self.storer = storer
+        self.isLoaded = false
     }
     
     // Public methods
     
     public func getAll() -> Array<T> {
+        if (self.isLoaded) {
+            return self.storage
+        }
+        
+        self.storage = self.storer!.getAll()
+        self.isLoaded = true
+        
         return self.storage
     }
     
@@ -31,23 +48,42 @@ public class CSRepository<T: Equatable> {
     }
     
     public func save(item: T) -> Bool {
-        if let existing = self.findItem(item) {
-            self.storage[existing.index] = item
-        } else {
-            self.storage.append(item)
+        var result = true
+        if let s = self.storer {
+            result = s.save(item)
         }
-        return true
+
+        if (result) {
+            if let existing = self.findItem(item) {
+                self.storage[existing.index] = item
+            } else {
+                self.storage.append(item)
+            }
+        }
+        
+        return result
     }
     
     public func remove(item: T) -> Bool {
-        if let existing = self.findItem(item) {
-            self.storage.removeAtIndex(existing.index)
+        var result = true
+        if let s = self.storer {
+            result = s.remove(item)
         }
-        return true
+        
+        if (result) {
+            if let existing = self.findItem(item) {
+                self.storage.removeAtIndex(existing.index)
+            }
+        }
+
+        return result
     }
     
     public func refresh() {
-        // Implement in derived classes
+        if (self.storer != nil) {
+            self.storage.removeAll(keepCapacity: false)
+            self.isLoaded = false
+        }
     }
     
     // Private methods
