@@ -8,5 +8,5 @@
 
 import UIKit
 
-public class CSCategoryRepository<T>: CSRepositoryBase<String> {
+public class CSCategoryRepository<T>: CSRepository<String> {
 }

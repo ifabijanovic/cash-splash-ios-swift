@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CSSpendingModelRepository<T>: CSRepositoryBase<CSSpendingModel> {
+public class CSSpendingModelRepository<T>: CSRepository<CSSpendingModel> {
     
     // Public methods
     

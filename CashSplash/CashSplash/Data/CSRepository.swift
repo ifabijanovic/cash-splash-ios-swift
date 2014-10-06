@@ -1,5 +1,5 @@
 //
-//  CSRepositoryBase.swift
+//  CSRepository.swift
 //  CashSplash
 //
 //  Created by Ivan Fabijanovic on 27/08/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CSRepositoryBase<T: Equatable> {
+public class CSRepository<T: Equatable> {
     
     // Properties
     

@@ -8,5 +8,5 @@
 
 import UIKit
 
-public class CSLabelRepository<T>: CSCategoryRepository<String> {
+public class CSLabelRepository<T>: CSRepository<String> {
 }
