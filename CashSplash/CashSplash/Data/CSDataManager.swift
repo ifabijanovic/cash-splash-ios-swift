@@ -10,7 +10,7 @@ import UIKit
 
 public class CSDataManager {
     
-    // Properties
+    // MAKR: - Properties
     
     private var factory : CSRepositoryFactory? = nil
     
@@ -21,7 +21,7 @@ public class CSDataManager {
         return self.factory!
     }
     
-    // Singleton
+    // MARK: - Singleton
     
     struct Singleton {
         static var token : dispatch_once_t = 0
@@ -35,7 +35,7 @@ public class CSDataManager {
         return Singleton.instance!
     }
     
-    // Private methods
+    // MARK: - Private methods
     
     func createRepositoryFactory() -> CSRepositoryFactory {
 //        let useDropbox = CSSettingsManager.sharedManager().useDropbox

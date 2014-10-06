@@ -10,13 +10,13 @@ import UIKit
 
 public class CSRepository<T: Equatable> {
     
-    // Properties
+    // MARK: - Properties
     
     internal var storage: Array<T>
     internal let storer: CSStorer<T>?
     internal var isLoaded: Bool
     
-    // Init
+    // MARK: - Init
     
     internal init() {
         self.storage = Array<T>()
@@ -30,7 +30,7 @@ public class CSRepository<T: Equatable> {
         self.isLoaded = false
     }
     
-    // Public methods
+    // MARK: - Public methods
     
     public func getAll() -> Array<T> {
         if (self.isLoaded) {
@@ -86,7 +86,7 @@ public class CSRepository<T: Equatable> {
         }
     }
     
-    // Private methods
+    // MARK: - Private methods
     
     internal func findItem(item: T) -> (index: Int, element: T)? {
         for (index, element) in enumerate(self.storage) {

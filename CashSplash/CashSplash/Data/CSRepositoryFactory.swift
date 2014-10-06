@@ -10,16 +10,16 @@ import UIKit
 
 public class CSRepositoryFactory {
     
-    // Init
+    // MARK: - Init
     
     internal init() {}
     
     // Public methods
     
-//    public func createSpendingModelRepository() -> CSSpendingModelRepository<AnyObject> {
-//        return CSSpendingModelRepository<AnyObject>()
-//    }
-//    
+    public func createSpendingModelRepository() -> CSSpendingRepository<CSSpending> {
+        return CSSpendingRepository<CSSpending>()
+    }
+    
     public func createCategoryRepository() -> CSRepository<String> {
         return CSRepository<String>()
     }
