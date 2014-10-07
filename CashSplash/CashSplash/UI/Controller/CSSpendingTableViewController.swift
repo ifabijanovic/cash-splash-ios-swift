@@ -8,7 +8,21 @@
 
 import UIKit
 
-class CSSpendingTableViewController: UITableViewController {
+class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate, CSStringPickerDelegate {
+    
+    // MARK: - Constants
+    
+    private let categoryIdentifier = "category"
+    private let labelIdentifier = "label"
+    
+    private let categoryCellIndex = NSIndexPath(forRow: 0, inSection: 1)
+    private let labelCellIndex = NSIndexPath(forRow: 1, inSection: 1)
+    
+    // MARK: - Properties
+    
+    private var category = ""
+    private var label = ""
+    private var date = NSDate.date()
     
     // MARK: - Outlets
     
@@ -22,96 +36,121 @@ class CSSpendingTableViewController: UITableViewController {
     // MARK: - Actions
     
     @IBAction func saveTapped(sender: AnyObject) {
+        self.amountTextField.resignFirstResponder()
+        self.noteTextField.resignFirstResponder()
         
+        let amount = NSString(string: self.amountTextField.text).floatValue // TODO: check back later if there is a Swift way to do this
+        let note = self.noteTextField.text
+        
+        let spending = CSSpending()
+        spending.amount = amount
+        spending.category = self.category
+        spending.label = self.label
+        spending.timestamp = self.date
+        spending.note = note
+        
+        let factory = CSDataManager.sharedManager().createRepositoryFactory()
+        let repository = factory.createSpendingModelRepository()
+        
+        if repository.save(spending) {
+            self.clear()
+            CSInfoView.animateWithDuration(1.0, fadeDuration: 0.3, text: "Got it!")
+        }
     }
     
-    @IBAction func endEdit(sender: AnyObject) {
-        
+    @IBAction func endEdit(sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
-
+    // MARK: - View lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        self.tableView.estimatedRowHeight = 44
+        self.clear()
+    }
+    
+    // MARK: - Helper methods
+    
+    func clear() {
+        self.amountTextField.text = ""
+        self.category = ""
+        self.categoryLabel.text = ""
+        self.label = ""
+        self.labelLabel.text = ""
+        self.setDate(NSDate.date())
+        self.noteTextField.text = ""
+    }
+    
+    func setDate(date: NSDate) {
+        self.date = date
+        self.dateLabel.text = NSDateFormatter.localizedStringFromDate(date, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+    }
+    
+    // MARK: - CSDatePickerDelegate
+    
+    func datePicker(datePicker: CSDatePickerViewController, didSelectDate date: NSDate) {
+        self.setDate(date)
+    }
+    
+    // MARK: - CSStringPickerDelegate
+    
+    func stringPicker(stringPicker: CSStringPickerTableViewController, didSelectString value: String) {
+        if (value.isEmpty) {
+            return
+        }
+        
+        if (stringPicker.identifier == self.categoryIdentifier) {
+            self.category = value
+            self.categoryLabel.text = value
+            self.tableView.cellForRowAtIndexPath(self.categoryCellIndex)?.layoutSubviews() // TODO: setNeedsLayout should work but it does not in Swift
+        } else if (stringPicker.identifier == self.labelIdentifier) {
+            self.label = value
+            self.labelLabel.text = value
+            self.tableView.cellForRowAtIndexPath(self.labelCellIndex)?.layoutSubviews() // TODO: setNeedsLayout should work but it does not in Swift
+        }
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    // MARK: - Table view delegate
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
+        
+        if (indexPath.section == 2) && (indexPath.row == 0) {
+            self.clear()
+        }
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView!) -> Int {
-        // #warning Potentially incomplete method implementation.
-        // Return the number of sections.
-        return 0
-    }
-
-    override func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        return 0
-    }
-
-    /*
-    override func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell! {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath) as UITableViewCell
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView!, canEditRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        // Return NO if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView!, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath!) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView!, moveRowAtIndexPath fromIndexPath: NSIndexPath!, toIndexPath: NSIndexPath!) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView!, canMoveRowAtIndexPath indexPath: NSIndexPath!) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.amountTextField.resignFirstResponder()
+        self.noteTextField.resignFirstResponder()
+        
+        if (segue.identifier == "pickDateSegue") {
+            let controller = segue.destinationViewController as CSDatePickerViewController
+            controller.delegate = self
+            controller.date = self.date
+        } else if (segue.identifier == "pickCategorySegue") {
+            let controller = segue.destinationViewController as CSStringPickerTableViewController
+            controller.delegate = self
+            controller.dataSource = CSDataManager.sharedManager().createRepositoryFactory().createCategoryRepository()
+            controller.selected = self.category
+            controller.identifier = self.categoryIdentifier
+            controller.title = "Category"
+            controller.addSectionTitle = "New category"
+            controller.addPlaceholdeText = "Enter new category name here"
+        } else if (segue.identifier == "pickLabelSegue") {
+            let controller = segue.destinationViewController as CSStringPickerTableViewController
+            controller.delegate = self
+            controller.dataSource = CSDataManager.sharedManager().createRepositoryFactory().createLabelRepository()
+            controller.selected = self.label
+            controller.identifier = self.labelIdentifier
+            controller.title = "Label"
+            controller.addSectionTitle = "New label"
+            controller.addPlaceholdeText = "Enter new label name here"
+        }
     }
-    */
 
 }
