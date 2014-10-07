@@ -10,7 +10,7 @@ import UIKit
 
 protocol CSDatePickerDelegate: class {
     
-    func setDate(date: NSDate)
+    func datePicker(datePicker: CSDatePickerViewController, didSelectDate date: NSDate)
     
 }
 
@@ -36,16 +36,16 @@ class CSDatePickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let d = self.date {
-            self.datePicker.date = d
+        if let date = self.date {
+            self.datePicker.date = date
         }
     }
 
     override func viewWillDisappear(animated: Bool) {
         super.viewDidDisappear(animated)
         
-        if let d = self.delegate {
-            d.setDate(self.datePicker.date)
+        if let delegate = self.delegate {
+            delegate.datePicker(self, didSelectDate: self.datePicker.date)
         }
     }
 

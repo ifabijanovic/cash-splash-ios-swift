@@ -8,7 +8,15 @@
 
 import UIKit
 
-class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate {
+class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate, CSStringPickerDelegate {
+    
+    // MARK: - Constants
+    
+    private let categoryIdentifier = "category"
+    private let labelIdentifier = "label"
+    
+    private let categoryCellIndex = NSIndexPath(forRow: 0, inSection: 1)
+    private let labelCellIndex = NSIndexPath(forRow: 1, inSection: 1)
     
     // MARK: - Properties
     
@@ -55,11 +63,29 @@ class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate
         self.noteTextField.text = ""
     }
     
-    // MARK: - CSDatePickerDelegate
-    
     func setDate(date: NSDate) {
         self.date = date
         self.dateLabel.text = NSDateFormatter.localizedStringFromDate(date, dateStyle: NSDateFormatterStyle.ShortStyle, timeStyle: NSDateFormatterStyle.ShortStyle)
+    }
+    
+    // MARK: - CSDatePickerDelegate
+    
+    func datePicker(datePicker: CSDatePickerViewController, didSelectDate date: NSDate) {
+        self.setDate(date)
+    }
+    
+    // MARK: - CSStringPickerDelegate
+    
+    func stringPicker(stringPicker: CSStringPickerTableViewController, didSelectString value: String) {
+        if (stringPicker.identifier == self.categoryIdentifier) {
+            self.category = value
+            self.categoryLabel.text = value
+            self.tableView.cellForRowAtIndexPath(self.categoryCellIndex)?.setNeedsLayout()
+        } else if (stringPicker.identifier == self.labelIdentifier) {
+            self.label = value
+            self.labelLabel.text = value
+            self.tableView.cellForRowAtIndexPath(self.labelCellIndex)?.setNeedsLayout()
+        }
     }
 
     // MARK: - Table view delegate
@@ -82,6 +108,18 @@ class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate
             let controller = segue.destinationViewController as CSDatePickerViewController
             controller.delegate = self
             controller.date = self.date
+        } else if (segue.identifier == "pickCategorySegue") {
+            let controller = segue.destinationViewController as CSStringPickerTableViewController
+            controller.delegate = self
+            controller.dataSource = CSDataManager.sharedManager().createRepositoryFactory().createCategoryRepository()
+            controller.selected = self.category
+            controller.identifier = self.categoryIdentifier
+        } else if (segue.identifier == "pickLabelSegue") {
+            let controller = segue.destinationViewController as CSStringPickerTableViewController
+            controller.delegate = self
+            controller.dataSource = CSDataManager.sharedManager().createRepositoryFactory().createLabelRepository()
+            controller.selected = self.label
+            controller.identifier = self.labelIdentifier
         }
     }
 
