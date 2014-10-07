@@ -36,18 +36,37 @@ class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate
     // MARK: - Actions
     
     @IBAction func saveTapped(sender: AnyObject) {
+        self.amountTextField.resignFirstResponder()
+        self.noteTextField.resignFirstResponder()
         
+        let amount = NSString(string: self.amountTextField.text).floatValue // TODO: check back later if there is a Swift way to do this
+        let note = self.noteTextField.text
+        
+        let spending = CSSpending()
+        spending.amount = amount
+        spending.category = self.category
+        spending.label = self.label
+        spending.timestamp = self.date
+        spending.note = note
+        
+        let factory = CSDataManager.sharedManager().createRepositoryFactory()
+        let repository = factory.createSpendingModelRepository()
+        
+        if repository.save(spending) {
+            self.clear()
+        }
     }
     
-    @IBAction func endEdit(sender: AnyObject) {
-        
+    @IBAction func endEdit(sender: UITextField) {
+        sender.resignFirstResponder()
     }
     
     // MARK: - View lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.estimatedRowHeight = 44
         self.clear()
     }
     
@@ -77,14 +96,18 @@ class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate
     // MARK: - CSStringPickerDelegate
     
     func stringPicker(stringPicker: CSStringPickerTableViewController, didSelectString value: String) {
+        if (value.isEmpty) {
+            return
+        }
+        
         if (stringPicker.identifier == self.categoryIdentifier) {
             self.category = value
             self.categoryLabel.text = value
-            self.tableView.cellForRowAtIndexPath(self.categoryCellIndex)?.setNeedsLayout()
+            self.tableView.cellForRowAtIndexPath(self.categoryCellIndex)?.layoutSubviews() // TODO: setNeedsLayout should work but it does not in Swift
         } else if (stringPicker.identifier == self.labelIdentifier) {
             self.label = value
             self.labelLabel.text = value
-            self.tableView.cellForRowAtIndexPath(self.labelCellIndex)?.setNeedsLayout()
+            self.tableView.cellForRowAtIndexPath(self.labelCellIndex)?.layoutSubviews() // TODO: setNeedsLayout should work but it does not in Swift
         }
     }
 

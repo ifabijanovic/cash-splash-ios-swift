@@ -14,7 +14,7 @@ protocol CSStringPickerDelegate: class {
     
 }
 
-class CSStringPickerTableViewController: UITableViewController {
+class CSStringPickerTableViewController: UITableViewController, CSNewStringDelegate {
     
     // MARK: - Properties
     
@@ -142,6 +142,25 @@ class CSStringPickerTableViewController: UITableViewController {
             let items = dataSource.getAll()
             self.selected = items[indexPath.row]
         }
+    }
+    
+    // MARK: - CSNewStringDelegate
+    
+    func newString(newString: CSNewStringTableViewController, didSaveItem item: String) {
+        if let dataSource = self.dataSource {
+            if dataSource.save(item) {
+                let row = max(0, dataSource.count() - 1)
+                let indexPath = NSIndexPath(forRow: row, inSection: 0)
+                self.tableView.insertRowsAtIndexPaths([indexPath], withRowAnimation: UITableViewRowAnimation.Automatic)
+            }
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let controller = segue.destinationViewController as CSNewStringTableViewController
+        controller.delegate = self
     }
 
 }
