@@ -255,10 +255,10 @@
 		81F3062E19E3D95F00BC667F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				81F3063819E3EAD600BC667F /* CSDatePickerViewController.swift */,
+				81F3063519E3E9E100BC667F /* CSNewStringTableViewController.swift */,
 				81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */,
 				81F3063219E3E86900BC667F /* CSStringPickerTableViewController.swift */,
-				81F3063519E3E9E100BC667F /* CSNewStringTableViewController.swift */,
-				81F3063819E3EAD600BC667F /* CSDatePickerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

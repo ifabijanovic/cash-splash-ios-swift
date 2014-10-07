@@ -22,8 +22,11 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter amount here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="UVB-41-KTc">
                                                     <rect key="frame" x="20" y="7" width="560" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="4Zh-9z-gcl"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="endEdit:" destination="XwG-Sv-SCx" eventType="editingDidEndOnExit" id="e85-t8-j2Z"/>
                                                     </connections>
@@ -117,8 +120,11 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Additional notes" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tMU-7a-inz">
                                                     <rect key="frame" x="20" y="7" width="560" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="OEC-xl-4dA"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                                     <connections>
                                                         <action selector="endEdit:" destination="XwG-Sv-SCx" eventType="editingDidEndOnExit" id="KbL-Pu-W5S"/>
                                                     </connections>
@@ -142,17 +148,20 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Clear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V6k-Ze-g4c">
-                                                    <rect key="frame" x="20" y="8" width="560" height="28"/>
+                                                    <rect key="frame" x="20" y="7" width="560" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="xPS-km-JPG"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="V6k-Ze-g4c" firstAttribute="top" secondItem="cmw-QC-9Sw" secondAttribute="top" constant="8" id="BX4-Q6-vnO"/>
+                                                <constraint firstItem="V6k-Ze-g4c" firstAttribute="top" secondItem="cmw-QC-9Sw" secondAttribute="top" constant="7" id="BX4-Q6-vnO"/>
                                                 <constraint firstItem="V6k-Ze-g4c" firstAttribute="leading" secondItem="cmw-QC-9Sw" secondAttribute="leading" constant="20" id="Qgq-03-zJE"/>
                                                 <constraint firstAttribute="trailing" secondItem="V6k-Ze-g4c" secondAttribute="trailing" constant="20" id="awR-6N-QSU"/>
-                                                <constraint firstAttribute="bottom" secondItem="V6k-Ze-g4c" secondAttribute="bottom" constant="8" id="bv7-d9-Uj7"/>
+                                                <constraint firstAttribute="bottom" secondItem="V6k-Ze-g4c" secondAttribute="bottom" constant="7" id="bv7-d9-Uj7"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -236,14 +245,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8gP-mA-F0W">
-                                <rect key="frame" x="0.0" y="219" width="600" height="162"/>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8gP-mA-F0W">
+                                <rect key="frame" x="140" y="219" width="320" height="162"/>
                                 <date key="date" timeIntervalSinceReferenceDate="434367068.925816">
                                     <!--2014-10-07 09:31:08 +0000-->
                                 </date>
                             </datePicker>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="8gP-mA-F0W" secondAttribute="centerY" id="CkN-yj-QR4"/>
+                            <constraint firstAttribute="centerX" secondItem="8gP-mA-F0W" secondAttribute="centerX" id="rbv-iI-dEe"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Date" id="fUP-Gx-W8k">
                         <barButtonItem key="rightBarButtonItem" title="Now" id="xHS-qd-8YQ">
