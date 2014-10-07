@@ -1,37 +1,41 @@
 //
-//  CSDropboxLabelRepository.swift
+//  CSDropboxStringStorer.swift
 //  CashSplash
 //
-//  Created by Ivan Fabijanovic on 11/07/14.
+//  Created by Ivan Fabijanovic on 06/10/14.
 //  Copyright (c) 2014 Ivan Fabijanovic. All rights reserved.
 //
 
 import UIKit
 
-internal class CSDropboxLabelRepository<T>: CSLabelRepository<AnyObject> {
-    let tableName = "label"
-    let datastore : DBDatastore?
-    let table : DBTable?
+internal class CSDropboxStringStorer<T: Equatable>: CSStorer<String> {
     
-    // Init
+    // MARK: - Properties
     
-    internal init(datastore: DBDatastore?) {
+    private let tableName : String
+    private let datastore : DBDatastore?
+    private let table : DBTable?
+    
+    // MARK: - Init
+    
+    internal init(tableName: String, datastore: DBDatastore?) {
+        self.tableName = tableName
         self.datastore = datastore
         if (datastore != nil) {
             self.table = self.datastore!.getTable(self.tableName)
         }
     }
     
-    // Public methods
+    // MARK: - Public methods
     
-    override func getAll() -> Array<String> {
+    internal override func getAll() -> Array<String> {
         if (self.table != nil) {
             CSDropboxManager.syncDatastore(self.datastore)
             var error : DBError? = nil
             let data : NSArray! = self.table!.query(nil, error: &error)
             
             if (error != nil) {
-                NSLog("[Dropbox] Label getAll error: %@", error!)
+                NSLog("[Dropbox] %@ getAll error: %@", self.tableName, error!)
                 return Array<String>()
             }
             
@@ -47,16 +51,16 @@ internal class CSDropboxLabelRepository<T>: CSLabelRepository<AnyObject> {
         return Array<String>()
     }
     
-    override func save(label: String) -> Bool {
+    internal override func save(item: String) -> Bool {
         if (self.table != nil) {
             var error : DBError? = nil
-            let dictionary = ["name": label] as NSDictionary
+            let dictionary = ["name": item] as NSDictionary
             
             self.table!.insert(dictionary)
             self.datastore!.sync(&error)
             
             if (error != nil) {
-                NSLog("[Dropbox] Label save error: %@", error!);
+                NSLog("[Dropbox] %@ save error: %@", self.tableName, error!);
                 return false
             }
             
@@ -65,15 +69,15 @@ internal class CSDropboxLabelRepository<T>: CSLabelRepository<AnyObject> {
         return false
     }
     
-    override func remove(label: String) -> Bool {
+    internal override func remove(item: String) -> Bool {
         if (self.table != nil) {
             var error : DBError? = nil
             
-            let dictionary = ["name": label] as NSDictionary
+            let dictionary = ["name": item] as NSDictionary
             let records : NSArray! = self.table!.query(dictionary, error: &error)
             
             if (error != nil) {
-                NSLog("[Dropbox] Label remove error: %@", error!);
+                NSLog("[Dropbox] %@ remove error: %@", self.tableName, error!);
                 return false
             }
             
@@ -85,7 +89,7 @@ internal class CSDropboxLabelRepository<T>: CSLabelRepository<AnyObject> {
                 self.datastore!.sync(&error)
                 
                 if (error != nil) {
-                    NSLog("[Dropbox] Label remove error: %@", error!);
+                    NSLog("[Dropbox] %@ remove error: %@", self.tableName, error!);
                     return false
                 }
             }
@@ -94,4 +98,5 @@ internal class CSDropboxLabelRepository<T>: CSLabelRepository<AnyObject> {
         }
         return false
     }
+    
 }

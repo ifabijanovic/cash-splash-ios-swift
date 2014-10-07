@@ -7,43 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8125736219AE005D0006C59E /* CSTablePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736119AE005D0006C59E /* CSTablePickerDataSource.swift */; };
-		8125736319AE005D0006C59E /* CSTablePickerDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736119AE005D0006C59E /* CSTablePickerDataSource.swift */; };
-		8125736F19AE0EAE0006C59E /* CSCategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736B19AE0EAE0006C59E /* CSCategoryDataSource.swift */; };
-		8125737019AE0EAE0006C59E /* CSCategoryDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736B19AE0EAE0006C59E /* CSCategoryDataSource.swift */; };
-		8125737119AE0EAE0006C59E /* CSDataSourceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736C19AE0EAE0006C59E /* CSDataSourceBase.swift */; };
-		8125737219AE0EAE0006C59E /* CSDataSourceBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736C19AE0EAE0006C59E /* CSDataSourceBase.swift */; };
-		8125737319AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736D19AE0EAE0006C59E /* CSLabelDataSource.swift */; };
-		8125737419AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736D19AE0EAE0006C59E /* CSLabelDataSource.swift */; };
-		8125737519AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */; };
-		8125737619AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */; };
-		8125737819AE0FF20006C59E /* CSRepositoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125737719AE0FF20006C59E /* CSRepositoryBase.swift */; };
-		8125737919AE0FF20006C59E /* CSRepositoryBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8125737719AE0FF20006C59E /* CSRepositoryBase.swift */; };
-		8133F1C4196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */; };
-		8133F1C5196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */; };
-		8133F1C7196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C6196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift */; };
-		8133F1C8196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C6196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift */; };
 		8133F1CA196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */; };
 		8133F1CB196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */; };
 		8133F1CD196FFB8900D51900 /* CSDropboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */; };
 		8133F1CE196FFB8900D51900 /* CSDropboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */; };
-		813E831D19643B6800D04FC3 /* CSLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831C19643B6800D04FC3 /* CSLabelRepository.swift */; };
-		813E831E19643B6800D04FC3 /* CSLabelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831C19643B6800D04FC3 /* CSLabelRepository.swift */; };
-		813E832019643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */; };
-		813E832119643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */; };
-		813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */; };
-		813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */; };
 		81560126197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
 		81560127197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
+		816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5919E2CF6400F1A277 /* CSRepository.swift */; };
+		816D4F5B19E2CF6400F1A277 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5919E2CF6400F1A277 /* CSRepository.swift */; };
+		816D4F6719E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */; };
+		816D4F6819E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */; };
+		816D4F6A19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */; };
+		816D4F6B19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */; };
+		816D4F7619E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */; };
+		816D4F7719E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */; };
+		816D4F7C19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */; };
+		816D4F7D19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */; };
+		816D4F7F19E2E0CC00F1A277 /* CSStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */; };
+		816D4F8019E2E0CC00F1A277 /* CSStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */; };
 		81B3AA75196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
 		81B3AA76196434BC001582FC /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = 81B3AA74196434BC001582FC /* Settings.plist */; };
-		81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7919643586001582FC /* CSCategoryRepository.swift */; };
-		81B3AA7B19643586001582FC /* CSCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B3AA7919643586001582FC /* CSCategoryRepository.swift */; };
 		81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C06B1962B6480098DB08 /* AppDelegate.swift */; };
 		81D2C06E1962B6480098DB08 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81D2C06D1962B6480098DB08 /* Images.xcassets */; };
 		81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0791962B6480098DB08 /* CashSplashTests.swift */; };
-		81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */; };
-		81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */; };
+		81D2C0851962B8C70098DB08 /* CSSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpending.swift */; };
+		81D2C0861962B8C70098DB08 /* CSSpending.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0841962B8C70098DB08 /* CSSpending.swift */; };
 		81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0881962BF840098DB08 /* CSSettingsManager.swift */; };
 		81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D2C0881962BF840098DB08 /* CSSettingsManager.swift */; };
 		81D8A834196AD4D70008AA99 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A833196AD4D70008AA99 /* CFNetwork.framework */; };
@@ -52,9 +40,9 @@
 		81D8A83A196AD4EF0008AA99 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A839196AD4EF0008AA99 /* QuartzCore.framework */; };
 		81D8A83C196AD4FC0008AA99 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A83B196AD4FC0008AA99 /* libc++.dylib */; };
 		81D8A83E196AD5050008AA99 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A83D196AD5050008AA99 /* libz.dylib */; };
-		81D8A845196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */; };
-		81D8A846196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */; };
 		81D8A84D196ADA960008AA99 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A84C196ADA960008AA99 /* Dropbox.framework */; };
+		81F3062619E3D4A900BC667F /* CSSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */; };
+		81F3062719E3D4A900BC667F /* CSSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,23 +56,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8125736119AE005D0006C59E /* CSTablePickerDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSTablePickerDataSource.swift; path = UI/Protocol/CSTablePickerDataSource.swift; sourceTree = "<group>"; };
-		8125736B19AE0EAE0006C59E /* CSCategoryDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSCategoryDataSource.swift; path = UI/DataSource/CSCategoryDataSource.swift; sourceTree = "<group>"; };
-		8125736C19AE0EAE0006C59E /* CSDataSourceBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataSourceBase.swift; path = UI/DataSource/CSDataSourceBase.swift; sourceTree = "<group>"; };
-		8125736D19AE0EAE0006C59E /* CSLabelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSLabelDataSource.swift; path = UI/DataSource/CSLabelDataSource.swift; sourceTree = "<group>"; };
-		8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModelDataSource.swift; path = UI/DataSource/CSSpendingModelDataSource.swift; sourceTree = "<group>"; };
-		8125737719AE0FF20006C59E /* CSRepositoryBase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryBase.swift; path = Data/Interface/CSRepositoryBase.swift; sourceTree = "<group>"; };
-		8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxLabelRepository.swift; path = Data/Dropbox/CSDropboxLabelRepository.swift; sourceTree = "<group>"; };
-		8133F1C6196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxSpendingModelRepository.swift; path = Data/Dropbox/CSDropboxSpendingModelRepository.swift; sourceTree = "<group>"; };
 		8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxRepositoryFactory.swift; path = Data/Dropbox/CSDropboxRepositoryFactory.swift; sourceTree = "<group>"; };
 		8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxManager.swift; path = Data/Dropbox/CSDropboxManager.swift; sourceTree = "<group>"; };
-		813E831C19643B6800D04FC3 /* CSLabelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSLabelRepository.swift; path = Data/Interface/CSLabelRepository.swift; sourceTree = "<group>"; };
-		813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModelRepository.swift; path = Data/Interface/CSSpendingModelRepository.swift; sourceTree = "<group>"; };
-		813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/Interface/CSRepositoryFactory.swift; sourceTree = "<group>"; };
 		81560125197189CC00B6E51E /* CSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataManager.swift; path = Data/CSDataManager.swift; sourceTree = "<group>"; };
+		816D4F5919E2CF6400F1A277 /* CSRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepository.swift; path = Data/CSRepository.swift; sourceTree = "<group>"; };
+		816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/CSRepositoryFactory.swift; sourceTree = "<group>"; };
+		816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingRepository.swift; path = Data/CSSpendingRepository.swift; sourceTree = "<group>"; };
+		816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxStringStorer.swift; path = Data/Dropbox/CSDropboxStringStorer.swift; sourceTree = "<group>"; };
+		816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxSpendingStorer.swift; path = Data/Dropbox/CSDropboxSpendingStorer.swift; sourceTree = "<group>"; };
+		816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSStorer.swift; path = Data/CSStorer.swift; sourceTree = "<group>"; };
 		81AEF71B19A337AB00A26B7E /* CashSplashTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplashTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		81B3AA74196434BC001582FC /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
-		81B3AA7919643586001582FC /* CSCategoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSCategoryRepository.swift; path = Data/Interface/CSCategoryRepository.swift; sourceTree = "<group>"; };
 		81D2C0661962B6480098DB08 /* CashSplash.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CashSplash.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D2C06A1962B6480098DB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D2C06B1962B6480098DB08 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -92,7 +74,7 @@
 		81D2C0731962B6480098DB08 /* CashSplashTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CashSplashTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81D2C0781962B6480098DB08 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		81D2C0791962B6480098DB08 /* CashSplashTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashSplashTests.swift; sourceTree = "<group>"; };
-		81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingModel.swift; path = Model/CSSpendingModel.swift; sourceTree = "<group>"; };
+		81D2C0841962B8C70098DB08 /* CSSpending.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpending.swift; path = Model/CSSpending.swift; sourceTree = "<group>"; };
 		81D2C0881962BF840098DB08 /* CSSettingsManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSettingsManager.swift; path = Util/CSSettingsManager.swift; sourceTree = "<group>"; };
 		81D8A833196AD4D70008AA99 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		81D8A835196AD4DF0008AA99 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -100,9 +82,9 @@
 		81D8A839196AD4EF0008AA99 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		81D8A83B196AD4FC0008AA99 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		81D8A83D196AD5050008AA99 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
-		81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxCategoryRepository.swift; path = Data/Dropbox/CSDropboxCategoryRepository.swift; sourceTree = "<group>"; };
 		81D8A847196AD82C0008AA99 /* CashSplash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplash-Bridging-Header.h"; sourceTree = "<group>"; };
 		81D8A84C196ADA960008AA99 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingStorer.swift; path = Data/CSSpendingStorer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,51 +115,22 @@
 		8125735F19AE00200006C59E /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				8125736A19AE0EA40006C59E /* DataSource */,
-				8125736019AE002C0006C59E /* Protocol */,
 			);
 			name = UI;
-			sourceTree = "<group>";
-		};
-		8125736019AE002C0006C59E /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				8125736119AE005D0006C59E /* CSTablePickerDataSource.swift */,
-			);
-			name = Protocol;
-			sourceTree = "<group>";
-		};
-		8125736A19AE0EA40006C59E /* DataSource */ = {
-			isa = PBXGroup;
-			children = (
-				8125736B19AE0EAE0006C59E /* CSCategoryDataSource.swift */,
-				8125736C19AE0EAE0006C59E /* CSDataSourceBase.swift */,
-				8125736D19AE0EAE0006C59E /* CSLabelDataSource.swift */,
-				8125736E19AE0EAE0006C59E /* CSSpendingModelDataSource.swift */,
-			);
-			name = DataSource;
 			sourceTree = "<group>";
 		};
 		81B3AA771964355A001582FC /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				81D8A843196AD5CB0008AA99 /* Dropbox */,
-				81B3AA7819643563001582FC /* Interface */,
 				81560125197189CC00B6E51E /* CSDataManager.swift */,
+				816D4F5919E2CF6400F1A277 /* CSRepository.swift */,
+				816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */,
+				816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */,
+				816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */,
+				81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */,
 			);
 			name = Data;
-			sourceTree = "<group>";
-		};
-		81B3AA7819643563001582FC /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				81B3AA7919643586001582FC /* CSCategoryRepository.swift */,
-				813E831C19643B6800D04FC3 /* CSLabelRepository.swift */,
-				8125737719AE0FF20006C59E /* CSRepositoryBase.swift */,
-				813E832219643F8300D04FC3 /* CSRepositoryFactory.swift */,
-				813E831F19643B8900D04FC3 /* CSSpendingModelRepository.swift */,
-			);
-			name = Interface;
 			sourceTree = "<group>";
 		};
 		81D2C05D1962B6480098DB08 = {
@@ -244,7 +197,7 @@
 		81D2C0831962B89D0098DB08 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				81D2C0841962B8C70098DB08 /* CSSpendingModel.swift */,
+				81D2C0841962B8C70098DB08 /* CSSpending.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -274,11 +227,10 @@
 		81D8A843196AD5CB0008AA99 /* Dropbox */ = {
 			isa = PBXGroup;
 			children = (
-				81D8A844196AD5F00008AA99 /* CSDropboxCategoryRepository.swift */,
-				8133F1C3196FE86500D51900 /* CSDropboxLabelRepository.swift */,
 				8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */,
 				8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */,
-				8133F1C6196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift */,
+				816D4F7B19E2DED500F1A277 /* CSDropboxSpendingStorer.swift */,
+				816D4F7519E2DBEC00F1A277 /* CSDropboxStringStorer.swift */,
 			);
 			name = Dropbox;
 			sourceTree = "<group>";
@@ -383,25 +335,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F3062619E3D4A900BC667F /* CSSpendingStorer.swift in Sources */,
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
-				8125737819AE0FF20006C59E /* CSRepositoryBase.swift in Sources */,
 				81560126197189CC00B6E51E /* CSDataManager.swift in Sources */,
-				81B3AA7A19643586001582FC /* CSCategoryRepository.swift in Sources */,
-				813E832319643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
-				81D8A845196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
-				8133F1C7196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */,
-				8125736F19AE0EAE0006C59E /* CSCategoryDataSource.swift in Sources */,
-				813E832019643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */,
-				81D2C0851962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
+				816D4F7619E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */,
+				816D4F6A19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */,
+				816D4F7C19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */,
+				81D2C0851962B8C70098DB08 /* CSSpending.swift in Sources */,
 				8133F1CD196FFB8900D51900 /* CSDropboxManager.swift in Sources */,
-				813E831D19643B6800D04FC3 /* CSLabelRepository.swift in Sources */,
 				81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */,
-				8125737519AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */,
 				8133F1CA196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
-				8125737319AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */,
-				8125737119AE0EAE0006C59E /* CSDataSourceBase.swift in Sources */,
-				8133F1C4196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */,
-				8125736219AE005D0006C59E /* CSTablePickerDataSource.swift in Sources */,
+				816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */,
+				816D4F7F19E2E0CC00F1A277 /* CSStorer.swift in Sources */,
+				816D4F6719E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -409,25 +355,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F3062719E3D4A900BC667F /* CSSpendingStorer.swift in Sources */,
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
-				8125737919AE0FF20006C59E /* CSRepositoryBase.swift in Sources */,
 				81560127197189CC00B6E51E /* CSDataManager.swift in Sources */,
-				81B3AA7B19643586001582FC /* CSCategoryRepository.swift in Sources */,
-				813E832419643F8300D04FC3 /* CSRepositoryFactory.swift in Sources */,
-				81D8A846196AD5F00008AA99 /* CSDropboxCategoryRepository.swift in Sources */,
-				8133F1C8196FE8F800D51900 /* CSDropboxSpendingModelRepository.swift in Sources */,
-				8125737019AE0EAE0006C59E /* CSCategoryDataSource.swift in Sources */,
-				813E832119643B8900D04FC3 /* CSSpendingModelRepository.swift in Sources */,
-				81D2C0861962B8C70098DB08 /* CSSpendingModel.swift in Sources */,
+				816D4F7719E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */,
+				816D4F6B19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */,
+				816D4F7D19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */,
+				81D2C0861962B8C70098DB08 /* CSSpending.swift in Sources */,
 				8133F1CE196FFB8900D51900 /* CSDropboxManager.swift in Sources */,
-				813E831E19643B6800D04FC3 /* CSLabelRepository.swift in Sources */,
 				81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */,
-				8125737619AE0EAE0006C59E /* CSSpendingModelDataSource.swift in Sources */,
 				8133F1CB196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
-				8125737419AE0EAE0006C59E /* CSLabelDataSource.swift in Sources */,
-				8125737219AE0EAE0006C59E /* CSDataSourceBase.swift in Sources */,
-				8133F1C5196FE86500D51900 /* CSDropboxLabelRepository.swift in Sources */,
-				8125736319AE005D0006C59E /* CSTablePickerDataSource.swift in Sources */,
+				816D4F5B19E2CF6400F1A277 /* CSRepository.swift in Sources */,
+				816D4F8019E2E0CC00F1A277 /* CSStorer.swift in Sources */,
+				816D4F6819E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

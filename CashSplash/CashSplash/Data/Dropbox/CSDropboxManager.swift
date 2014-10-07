@@ -10,7 +10,7 @@ import UIKit
 
 internal class CSDropboxManager: NSObject {
     
-    // Public methods
+    // MARK: - Public methods
     
     internal class func syncDatastore(datastore: DBDatastore?) {
         if let ds = datastore {

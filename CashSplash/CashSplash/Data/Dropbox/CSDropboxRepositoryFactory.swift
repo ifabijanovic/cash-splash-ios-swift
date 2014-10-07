@@ -9,7 +9,12 @@
 import UIKit
 
 internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
+    
+    // MARK: - Properties
+    
     let datastore : DBDatastore?
+    
+    // MARK: - Init
    
     override init() {
         var error : DBError? = nil
@@ -23,17 +28,20 @@ internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
         }
     }
     
-    // Public methods
+    // MARK: - Public methods
     
-    override func createCategoryRepository() -> CSCategoryRepository<AnyObject> {
-        return CSDropboxCategoryRepository<AnyObject>(datastore: self.datastore)
+    override func createCategoryRepository() -> CSRepository<String> {
+        let storer = CSDropboxStringStorer<String>(tableName: "category", datastore: self.datastore)
+        return CSRepository<String>(storer: storer)
     }
     
-    override func createLabelRepository() -> CSLabelRepository<AnyObject> {
-        return CSDropboxLabelRepository<AnyObject>(datastore: self.datastore)
+    override func createLabelRepository() -> CSRepository<String> {
+        let storer = CSDropboxStringStorer<String>(tableName: "label", datastore: self.datastore)
+        return CSRepository<String>(storer: storer)
     }
     
-    override func createSpendingModelRepository() -> CSSpendingModelRepository<AnyObject> {
-        return CSDropboxSpendingModelRepository<AnyObject>(datastore: self.datastore)
+    override func createSpendingModelRepository() -> CSSpendingRepository<CSSpending> {
+        let storer = CSDropboxSpendingStorer<CSSpending>(datastore: self.datastore)
+        return CSSpendingRepository<CSSpending>(storer: storer)
     }
 }

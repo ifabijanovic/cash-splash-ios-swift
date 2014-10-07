@@ -1,5 +1,5 @@
 //
-//  CSSpendingModel.swift
+//  CSSpending.swift
 //  CashSplash
 //
 //  Created by Ivan Fabijanovic on 01/07/14.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-public class CSSpendingModel : Equatable {
+public class CSSpending: Equatable {
     
     // Properties
     
@@ -64,6 +64,6 @@ public class CSSpendingModel : Equatable {
 
 // Equatable
 
-public func ==(lhs: CSSpendingModel, rhs: CSSpendingModel) -> Bool {
+public func ==(lhs: CSSpending, rhs: CSSpending) -> Bool {
     return lhs.key == rhs.key
 }
