@@ -43,6 +43,10 @@
 		81D8A84D196ADA960008AA99 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A84C196ADA960008AA99 /* Dropbox.framework */; };
 		81F3062619E3D4A900BC667F /* CSSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */; };
 		81F3062719E3D4A900BC667F /* CSSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */; };
+		81F3062C19E3D92800BC667F /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F3062B19E3D92800BC667F /* App.storyboard */; };
+		81F3062D19E3D92800BC667F /* App.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81F3062B19E3D92800BC667F /* App.storyboard */; };
+		81F3063019E3D99200BC667F /* CSSpendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */; };
+		81F3063119E3D99200BC667F /* CSSpendingTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +89,8 @@
 		81D8A847196AD82C0008AA99 /* CashSplash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplash-Bridging-Header.h"; sourceTree = "<group>"; };
 		81D8A84C196ADA960008AA99 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
 		81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingStorer.swift; path = Data/CSSpendingStorer.swift; sourceTree = "<group>"; };
+		81F3062B19E3D92800BC667F /* App.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = App.storyboard; path = UI/App.storyboard; sourceTree = "<group>"; };
+		81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingTableViewController.swift; path = UI/Controller/CSSpendingTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +121,8 @@
 		8125735F19AE00200006C59E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				81F3062E19E3D95F00BC667F /* Controller */,
+				81F3062B19E3D92800BC667F /* App.storyboard */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -235,6 +243,14 @@
 			name = Dropbox;
 			sourceTree = "<group>";
 		};
+		81F3062E19E3D95F00BC667F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -317,6 +333,7 @@
 			files = (
 				81D2C06E1962B6480098DB08 /* Images.xcassets in Resources */,
 				81B3AA75196434BC001582FC /* Settings.plist in Resources */,
+				81F3062C19E3D92800BC667F /* App.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +341,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F3062D19E3D92800BC667F /* App.storyboard in Resources */,
 				81B3AA76196434BC001582FC /* Settings.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -338,6 +356,7 @@
 				81F3062619E3D4A900BC667F /* CSSpendingStorer.swift in Sources */,
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
 				81560126197189CC00B6E51E /* CSDataManager.swift in Sources */,
+				81F3063019E3D99200BC667F /* CSSpendingTableViewController.swift in Sources */,
 				816D4F7619E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */,
 				816D4F6A19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */,
 				816D4F7C19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */,
@@ -358,6 +377,7 @@
 				81F3062719E3D4A900BC667F /* CSSpendingStorer.swift in Sources */,
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
 				81560127197189CC00B6E51E /* CSDataManager.swift in Sources */,
+				81F3063119E3D99200BC667F /* CSSpendingTableViewController.swift in Sources */,
 				816D4F7719E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */,
 				816D4F6B19E2D6B500F1A277 /* CSSpendingRepository.swift in Sources */,
 				816D4F7D19E2DED500F1A277 /* CSDropboxSpendingStorer.swift in Sources */,
