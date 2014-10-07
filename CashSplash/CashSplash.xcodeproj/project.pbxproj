@@ -51,6 +51,8 @@
 		81F3063419E3E86900BC667F /* CSStringPickerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3063219E3E86900BC667F /* CSStringPickerTableViewController.swift */; };
 		81F3063619E3E9E100BC667F /* CSNewStringTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3063519E3E9E100BC667F /* CSNewStringTableViewController.swift */; };
 		81F3063719E3E9E100BC667F /* CSNewStringTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3063519E3E9E100BC667F /* CSNewStringTableViewController.swift */; };
+		81F3063919E3EAD600BC667F /* CSDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3063819E3EAD600BC667F /* CSDatePickerViewController.swift */; };
+		81F3063A19E3EAD600BC667F /* CSDatePickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3063819E3EAD600BC667F /* CSDatePickerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,7 @@
 		81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingTableViewController.swift; path = UI/Controller/CSSpendingTableViewController.swift; sourceTree = "<group>"; };
 		81F3063219E3E86900BC667F /* CSStringPickerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSStringPickerTableViewController.swift; path = UI/Controller/CSStringPickerTableViewController.swift; sourceTree = "<group>"; };
 		81F3063519E3E9E100BC667F /* CSNewStringTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSNewStringTableViewController.swift; path = UI/Controller/CSNewStringTableViewController.swift; sourceTree = "<group>"; };
+		81F3063819E3EAD600BC667F /* CSDatePickerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDatePickerViewController.swift; path = UI/Controller/CSDatePickerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +258,7 @@
 				81F3062F19E3D99200BC667F /* CSSpendingTableViewController.swift */,
 				81F3063219E3E86900BC667F /* CSStringPickerTableViewController.swift */,
 				81F3063519E3E9E100BC667F /* CSNewStringTableViewController.swift */,
+				81F3063819E3EAD600BC667F /* CSDatePickerViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -374,6 +378,7 @@
 				81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 				8133F1CA196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
 				816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */,
+				81F3063919E3EAD600BC667F /* CSDatePickerViewController.swift in Sources */,
 				81F3063619E3E9E100BC667F /* CSNewStringTableViewController.swift in Sources */,
 				816D4F7F19E2E0CC00F1A277 /* CSStorer.swift in Sources */,
 				816D4F6719E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */,
@@ -397,6 +402,7 @@
 				81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 				8133F1CB196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
 				816D4F5B19E2CF6400F1A277 /* CSRepository.swift in Sources */,
+				81F3063A19E3EAD600BC667F /* CSDatePickerViewController.swift in Sources */,
 				81F3063719E3E9E100BC667F /* CSNewStringTableViewController.swift in Sources */,
 				816D4F8019E2E0CC00F1A277 /* CSStorer.swift in Sources */,
 				816D4F6819E2D61B00F1A277 /* CSRepositoryFactory.swift in Sources */,
