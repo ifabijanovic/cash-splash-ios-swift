@@ -38,10 +38,10 @@ public class CSDataManager {
     // MARK: - Private methods
     
     func createRepositoryFactory() -> CSRepositoryFactory {
-//        let useDropbox = CSSettingsManager.sharedManager().useDropbox
-//        if (useDropbox) {
-//            return CSDropboxRepositoryFactory()
-//        }
+        let useDropbox = CSSettingsManager.sharedManager().useDropbox
+        if (useDropbox) {
+            return CSDropboxRepositoryFactory()
+        }
         
         return CSRepositoryFactory()
     }

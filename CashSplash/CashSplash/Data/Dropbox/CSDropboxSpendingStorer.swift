@@ -8,7 +8,7 @@
 
 import UIKit
 
-internal class CSDropboxSpendingStorer<T: Equatable>: CSStorer<CSSpending> {
+internal class CSDropboxSpendingStorer<T: Equatable>: CSSpendingStorer<CSSpending> {
    
     // MARK: - Properties
     
@@ -41,7 +41,7 @@ internal class CSDropboxSpendingStorer<T: Equatable>: CSStorer<CSSpending> {
             let dataArray = data as Array<DBRecord>
             var items = Array<CSSpending>()
             for item in dataArray {
-                items.append(self.modelFromDBRecord(item))
+                items.append(self.spendingFromDBRecord(item))
             }
             
             return items
@@ -50,11 +50,46 @@ internal class CSDropboxSpendingStorer<T: Equatable>: CSStorer<CSSpending> {
         return Array<CSSpending>()
     }
     
+    internal override func getAllFromDate(date: NSDate) -> Array<CSSpending> {
+        var items = self.getAll()
+        
+        sort(&items, {
+            let result = $0.timestamp.compare($1.timestamp)
+            return result == NSComparisonResult.OrderedDescending
+        })
+        
+        return items
+    }
+    
+    internal override func get(key: String) -> CSSpending? {
+        if (self.table != nil) {
+            CSDropboxManager.syncDatastore(self.datastore)
+            var error : DBError? = nil
+            
+            let dictionary = ["key": key] as NSDictionary
+            let records : NSArray! = self.table!.query(dictionary, error: &error)
+            
+            if (error != nil) {
+                NSLog("[Dropbox] Spending get error: %@", error!)
+                return nil
+            }
+            
+            error = nil
+            let data = records as Array<DBRecord>
+            let record : DBRecord? = data.isEmpty ? nil : data[0]
+            if (record != nil) {
+                return self.spendingFromDBRecord(record!)
+            }
+        }
+        
+        return nil
+    }
+    
     internal override func save(item: CSSpending) -> Bool {
         if (self.table != nil) {
             var error : DBError? = nil
             
-            let item = self.dictionaryFromModel(item)
+            let item = self.dictionaryFromSpending(item)
             
             self.table!.insert(item)
             self.datastore!.sync(&error)
@@ -66,6 +101,7 @@ internal class CSDropboxSpendingStorer<T: Equatable>: CSStorer<CSSpending> {
             
             return true
         }
+        
         return false
     }
     
@@ -96,30 +132,31 @@ internal class CSDropboxSpendingStorer<T: Equatable>: CSStorer<CSSpending> {
             
             return true
         }
+        
         return false
     }
     
     // MARK: - Private methods
     
-    private func modelFromDBRecord(dbRecord: DBRecord) -> CSSpending {
-        var model = CSSpending(key: dbRecord["key"] as String)
-        model.amount = dbRecord["amount"] as Float
-        model.category = dbRecord["category"] as String?
-        model.label = dbRecord["label"] as String?
-        model.timestamp = dbRecord["timestamp"] as NSDate
-        model.note = dbRecord["note"] as String?
+    private func spendingFromDBRecord(dbRecord: DBRecord) -> CSSpending {
+        var spending = CSSpending(key: dbRecord["key"] as String)
+        spending.amount = dbRecord["amount"] as Float
+        spending.category = dbRecord["category"] as String?
+        spending.label = dbRecord["label"] as String?
+        spending.timestamp = dbRecord["timestamp"] as NSDate
+        spending.note = dbRecord["note"] as String?
         
-        return model
+        return spending
     }
     
-    private func dictionaryFromModel(model : CSSpending) -> NSDictionary {
+    private func dictionaryFromSpending(spending : CSSpending) -> NSDictionary {
         var dictionary = NSDictionary()
-        dictionary.setValue(model.key, forKey: "key")
-        dictionary.setValue(NSNumber(float: model.amount), forKey: "amount")
-        dictionary.setValue(model.category, forKey: "category")
-        dictionary.setValue(model.label, forKey: "label")
-        dictionary.setValue(model.timestamp, forKey: "timestamp")
-        dictionary.setValue(model.note, forKey: "note")
+        dictionary.setValue(spending.key, forKey: "key")
+        dictionary.setValue(NSNumber(float: spending.amount), forKey: "amount")
+        dictionary.setValue(spending.category, forKey: "category")
+        dictionary.setValue(spending.label, forKey: "label")
+        dictionary.setValue(spending.timestamp, forKey: "timestamp")
+        dictionary.setValue(spending.note, forKey: "note")
         
         return dictionary
     }

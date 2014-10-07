@@ -51,6 +51,8 @@
 		81D8A83C196AD4FC0008AA99 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A83B196AD4FC0008AA99 /* libc++.dylib */; };
 		81D8A83E196AD5050008AA99 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A83D196AD5050008AA99 /* libz.dylib */; };
 		81D8A84D196ADA960008AA99 /* Dropbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81D8A84C196ADA960008AA99 /* Dropbox.framework */; };
+		81F3062619E3D4A900BC667F /* CSSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */; };
+		81F3062719E3D4A900BC667F /* CSSpendingStorer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,7 @@
 		81D8A83D196AD5050008AA99 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		81D8A847196AD82C0008AA99 /* CashSplash-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CashSplash-Bridging-Header.h"; sourceTree = "<group>"; };
 		81D8A84C196ADA960008AA99 /* Dropbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Dropbox.framework; sourceTree = "<group>"; };
+		81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSSpendingStorer.swift; path = Data/CSSpendingStorer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,7 @@
 				816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */,
 				816D4F6919E2D6B500F1A277 /* CSSpendingRepository.swift */,
 				816D4F7E19E2E0CC00F1A277 /* CSStorer.swift */,
+				81F3062519E3D4A900BC667F /* CSSpendingStorer.swift */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -367,6 +371,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F3062619E3D4A900BC667F /* CSSpendingStorer.swift in Sources */,
 				81D2C06C1962B6480098DB08 /* AppDelegate.swift in Sources */,
 				81560126197189CC00B6E51E /* CSDataManager.swift in Sources */,
 				816D4F7619E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */,
@@ -391,6 +396,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F3062719E3D4A900BC667F /* CSSpendingStorer.swift in Sources */,
 				81D2C07A1962B6480098DB08 /* CashSplashTests.swift in Sources */,
 				81560127197189CC00B6E51E /* CSDataManager.swift in Sources */,
 				816D4F7719E2DBEC00F1A277 /* CSDropboxStringStorer.swift in Sources */,

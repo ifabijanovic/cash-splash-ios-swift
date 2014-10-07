@@ -9,7 +9,12 @@
 import UIKit
 
 internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
+    
+    // MARK: - Properties
+    
     let datastore : DBDatastore?
+    
+    // MARK: - Init
    
     override init() {
         var error : DBError? = nil
@@ -23,7 +28,7 @@ internal class CSDropboxRepositoryFactory: CSRepositoryFactory {
         }
     }
     
-    // Public methods
+    // MARK: - Public methods
     
     override func createCategoryRepository() -> CSRepository<String> {
         let storer = CSDropboxStringStorer<String>(tableName: "category", datastore: self.datastore)
