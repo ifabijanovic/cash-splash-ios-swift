@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CSSpendingTableViewController: UITableViewController {
+class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate {
     
     // MARK: - Properties
     
@@ -69,6 +69,19 @@ class CSSpendingTableViewController: UITableViewController {
         
         if (indexPath.section == 2) && (indexPath.row == 0) {
             self.clear()
+        }
+    }
+    
+    // MARK: - Navigation
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        self.amountTextField.resignFirstResponder()
+        self.noteTextField.resignFirstResponder()
+        
+        if (segue.identifier == "pickDateSegue") {
+            let controller = segue.destinationViewController as CSDatePickerViewController
+            controller.delegate = self
+            controller.date = self.date
         }
     }
 
