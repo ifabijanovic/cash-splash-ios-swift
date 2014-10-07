@@ -137,12 +137,18 @@ class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate
             controller.dataSource = CSDataManager.sharedManager().createRepositoryFactory().createCategoryRepository()
             controller.selected = self.category
             controller.identifier = self.categoryIdentifier
+            controller.title = "Category"
+            controller.addSectionTitle = "New category"
+            controller.addPlaceholdeText = "Enter new category name here"
         } else if (segue.identifier == "pickLabelSegue") {
             let controller = segue.destinationViewController as CSStringPickerTableViewController
             controller.delegate = self
             controller.dataSource = CSDataManager.sharedManager().createRepositoryFactory().createLabelRepository()
             controller.selected = self.label
             controller.identifier = self.labelIdentifier
+            controller.title = "Label"
+            controller.addSectionTitle = "New label"
+            controller.addPlaceholdeText = "Enter new label name here"
         }
     }
 

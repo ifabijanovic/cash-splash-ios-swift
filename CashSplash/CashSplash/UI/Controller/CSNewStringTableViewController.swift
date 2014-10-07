@@ -20,6 +20,9 @@ class CSNewStringTableViewController: UITableViewController {
     
     weak var delegate : CSNewStringDelegate?
     
+    var sectionTitle : String?
+    var placeholdeText : String?
+    
     // MARK: - Outlets
     
     @IBOutlet weak var itemTextField: UITextField!
@@ -43,12 +46,19 @@ class CSNewStringTableViewController: UITableViewController {
         super.viewDidLoad()
         
         self.tableView.estimatedRowHeight = 44
+        self.itemTextField.placeholder = self.placeholdeText
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
         self.itemTextField.becomeFirstResponder()
+    }
+    
+    // MARK: - Table view data source
+    
+    override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.sectionTitle
     }
 
 }

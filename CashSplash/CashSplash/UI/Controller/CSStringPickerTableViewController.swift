@@ -28,6 +28,9 @@ class CSStringPickerTableViewController: UITableViewController, CSNewStringDeleg
     var selected : String?
     var identifier : String?
     
+    var addSectionTitle : String?
+    var addPlaceholdeText : String?
+    
     private var selectedCell : UITableViewCell?
     
     // MARK: - View lifecycle
@@ -161,6 +164,9 @@ class CSStringPickerTableViewController: UITableViewController, CSNewStringDeleg
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let controller = segue.destinationViewController as CSNewStringTableViewController
         controller.delegate = self
+        controller.title = self.title
+        controller.sectionTitle = self.addSectionTitle
+        controller.placeholdeText = self.addPlaceholdeText
     }
 
 }
