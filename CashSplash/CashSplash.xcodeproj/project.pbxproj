@@ -11,6 +11,8 @@
 		8133F1CB196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */; };
 		8133F1CD196FFB8900D51900 /* CSDropboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */; };
 		8133F1CE196FFB8900D51900 /* CSDropboxManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */; };
+		813ACD3D19E42D9B00B48FF1 /* CSInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ACD3C19E42D9B00B48FF1 /* CSInfoView.swift */; };
+		813ACD3E19E42D9B00B48FF1 /* CSInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 813ACD3C19E42D9B00B48FF1 /* CSInfoView.swift */; };
 		81560126197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
 		81560127197189CC00B6E51E /* CSDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81560125197189CC00B6E51E /* CSDataManager.swift */; };
 		816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 816D4F5919E2CF6400F1A277 /* CSRepository.swift */; };
@@ -68,6 +70,7 @@
 /* Begin PBXFileReference section */
 		8133F1C9196FEF5300D51900 /* CSDropboxRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxRepositoryFactory.swift; path = Data/Dropbox/CSDropboxRepositoryFactory.swift; sourceTree = "<group>"; };
 		8133F1CC196FFB8900D51900 /* CSDropboxManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDropboxManager.swift; path = Data/Dropbox/CSDropboxManager.swift; sourceTree = "<group>"; };
+		813ACD3C19E42D9B00B48FF1 /* CSInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSInfoView.swift; path = UI/Component/CSInfoView.swift; sourceTree = "<group>"; };
 		81560125197189CC00B6E51E /* CSDataManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSDataManager.swift; path = Data/CSDataManager.swift; sourceTree = "<group>"; };
 		816D4F5919E2CF6400F1A277 /* CSRepository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepository.swift; path = Data/CSRepository.swift; sourceTree = "<group>"; };
 		816D4F6619E2D61B00F1A277 /* CSRepositoryFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CSRepositoryFactory.swift; path = Data/CSRepositoryFactory.swift; sourceTree = "<group>"; };
@@ -130,10 +133,19 @@
 		8125735F19AE00200006C59E /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				813ACD3B19E42D6300B48FF1 /* Component */,
 				81F3062E19E3D95F00BC667F /* Controller */,
 				81F3062B19E3D92800BC667F /* App.storyboard */,
 			);
 			name = UI;
+			sourceTree = "<group>";
+		};
+		813ACD3B19E42D6300B48FF1 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				813ACD3C19E42D9B00B48FF1 /* CSInfoView.swift */,
+			);
+			name = Component;
 			sourceTree = "<group>";
 		};
 		81B3AA771964355A001582FC /* Data */ = {
@@ -377,6 +389,7 @@
 				8133F1CD196FFB8900D51900 /* CSDropboxManager.swift in Sources */,
 				81D2C0891962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 				8133F1CA196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
+				813ACD3D19E42D9B00B48FF1 /* CSInfoView.swift in Sources */,
 				816D4F5A19E2CF6400F1A277 /* CSRepository.swift in Sources */,
 				81F3063919E3EAD600BC667F /* CSDatePickerViewController.swift in Sources */,
 				81F3063619E3E9E100BC667F /* CSNewStringTableViewController.swift in Sources */,
@@ -401,6 +414,7 @@
 				8133F1CE196FFB8900D51900 /* CSDropboxManager.swift in Sources */,
 				81D2C08A1962BF840098DB08 /* CSSettingsManager.swift in Sources */,
 				8133F1CB196FEF5300D51900 /* CSDropboxRepositoryFactory.swift in Sources */,
+				813ACD3E19E42D9B00B48FF1 /* CSInfoView.swift in Sources */,
 				816D4F5B19E2CF6400F1A277 /* CSRepository.swift in Sources */,
 				81F3063A19E3EAD600BC667F /* CSDatePickerViewController.swift in Sources */,
 				81F3063719E3E9E100BC667F /* CSNewStringTableViewController.swift in Sources */,

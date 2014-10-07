@@ -54,6 +54,7 @@ class CSSpendingTableViewController: UITableViewController, CSDatePickerDelegate
         
         if repository.save(spending) {
             self.clear()
+            CSInfoView.animateWithDuration(1.0, fadeDuration: 0.3, text: "Got it!")
         }
     }
     
